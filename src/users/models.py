@@ -8,10 +8,12 @@ class Psicologo(models.Model):
             ('F', 'Feminino'),
             ('P', 'Prefiro não responder'),
         )
-    user = models.OneToOneField(User, null=True,on_delete=models.CASCADE)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+
     name = models.CharField(max_length=200, null=True)
     email =  models.CharField(max_length=200, null=True)
     nCRP = models.CharField(max_length=11)
     bio = models.TextField()
-    genero = models.CharField(default = True, max_length=1, choices=GENERO)
+    genero = models.CharField(default='P', max_length=1, choices=GENERO)
+
 
