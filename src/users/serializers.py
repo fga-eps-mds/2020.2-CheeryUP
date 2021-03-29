@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
     )
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password')
+        fields = ('username', 'email', 'password')
 
 
 
@@ -36,7 +36,7 @@ class PsicologoSerializer(serializers.ModelSerializer):
         user_data = validated_data.pop('user')
         password = user_data.pop('password')
         user = UserSerializer.create(UserSerializer(), validated_data=user_data)
-        user.set_password('minhasenha')
+        user.set_password('password')
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
 
