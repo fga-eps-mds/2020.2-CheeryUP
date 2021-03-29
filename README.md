@@ -12,8 +12,9 @@
 
 
 ## Release 1
-[Slides](https://docs.google.com/presentation/d/1elaS3Q-Id5pkRb8AqTLDucXgC8hOcXoflT59Aqu-xfI/edit#slide=id.gca54601322_0_0)
-[Video](https://www.youtube.com/watch?v=-i132rXQbEE)
+ >[Slides](https://docs.google.com/presentation/d/1elaS3Q-Id5pkRb8AqTLDucXgC8hOcXoflT59Aqu-xfI/edit#slide=id.gca54601322_0_0)
+
+> [Video](https://www.youtube.com/watch?v=-i132rXQbEE)
 <br>
 
 ## Tecnologias
