@@ -6,6 +6,7 @@
 | :- | :- | :- | :- | :- | :- | :- |
 | 12/03/21 | Jitsi | 16h | 1h | [Davi](https://github.com/DaviMatheus) | Semanal | Todos |
 
+
 ***Pontos planejados***  
 
 1. Planejamento das Issues da Sprint 05.
