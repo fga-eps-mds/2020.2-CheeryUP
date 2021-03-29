@@ -25,7 +25,7 @@ SECRET_KEY = '4qbwu$l2$r$_^z01+#$s9l5(y((f)o9ggn2jgxj6a=xgcuup7g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 
 # Application definition
@@ -80,6 +80,10 @@ WSGI_APPLICATION = 'CheerUp.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'postgres': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
@@ -89,6 +93,11 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # <-- And here
+    ],
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -129,7 +138,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CORS_ALLOWED_ORIGINS = [
-    
+
     "http://localhost:3000",
-    
+
 ]
