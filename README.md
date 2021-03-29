@@ -60,7 +60,7 @@ Após a instalação conferir se o mesmo encontra em sua máquina.
 
 **Após esses passos o mesmo ficará disponível em** 
 
-    localhost:8000
+    0.0.0.0:8000
 
 * Para derrubar o container:
 
