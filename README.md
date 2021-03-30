@@ -29,6 +29,7 @@
 <a href="https://ibb.co/V33Pn7J"><img src="https://i.ibb.co/DLLScxz/React-native.png" width=20% alt="React-native" border="0"></a>
 <a href="https://ibb.co/T0tLqjj"><img src="https://i.ibb.co/HPqdpww/wpp.gif" alt="wpp" width=20% border="0"></a>
 <a href="https://ibb.co/xf44jWM"><img src="https://i.ibb.co/9VMMT6q/zenhub.png" width=18% alt="zenhub" border="0"></a>
+<a href="https://ibb.co/zHCcq8q"><img src="https://i.ibb.co/Xk6Bcyc/Figma.png" width=20% height=25% alt="Figma"  border="0"></a>
 
 
 
