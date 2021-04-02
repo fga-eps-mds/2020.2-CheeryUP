@@ -83,7 +83,6 @@
   - Daily
   - Programação pareada.
   - Issues com **time-box** para o FDS.
-  - Retrospectiva da sprint.
   - User-stories.
   - Velocity tracking.
   - Retrospectiva da sprint.
