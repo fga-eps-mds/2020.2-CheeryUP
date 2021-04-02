@@ -22,7 +22,6 @@
     - [Sprint 6](./sprints/sprint6/planning.md)
     - [Sprint 7](./sprints/sprint7/planning.md)
 
-
 - Results
     - [Sprint 0](./sprints/sprint0/result.md)
     - [Sprint 1](./sprints/sprint1/result.md)
