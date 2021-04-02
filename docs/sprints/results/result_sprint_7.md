@@ -24,55 +24,6 @@
 |*Data de término*|01/04/2021| 
 |*Duração*|7 dias|
 
-
-
-## 2.Backlog Sprints
-
-|ID | Descrição | Responsável| Status |
-|---|--------------------|--------------|------------- |
-
-
-***Resultados:***
-* 38 pontos planejados.
-* 38 pontos entregues.
-
-
-## 3.Relato da Sprint 
-    
-<div style="text-align: justify"> 
-    A sprint foi basicamente um complemento da sprint anterior, pois ela estava no intervalo da preparação para a Release 1.
-</div>
-
-## 4.Gráfico de Burndown
-<div style="text-align: justify">
-## Resultado da Sprint 6
-
-## Sumário
-
-
-- [1.Informações básicas](#1informações-básicas)
-- [2.Backlog Sprints](#2backlog-sprints)
-- [3.Relato da Sprint](#3relato-da-sprint)
-- [4.Gráfico de Burndown](#4gráfico-de-burndown)
-- [5.Gráfico de Velocity](#5gráfico-de-velocity)
-- [6.Retrospectiva da Sprint](#6retrospectiva-da-sprint)
-- [7.Cumulative Flow](#7cumulative-flow)
-- [8.Quadro de conhecimento](#8quadro-de-conhecimento)
-- [9.Práticas ágeis](#9práticas-ágeis)
-- [10.Review do ScrumMaster](#10review-do-scrummaster)
-
-
-## 1.Informações básicas
-
-| | |
-|:--:|:--:|
-|*Número da sprint*|6|
-|*Data de início*|19/03/2021|
-|*Data de término*|26/03/2021| 
-|*Duração*|7 dias|
-
-
-
 ## 2.Backlog Sprints
 
 |ID | Descrição | Responsável| Status |
@@ -91,7 +42,7 @@
 ## 3.Relato da Sprint 
     
 <div style="text-align: justify"> 
-  A sprint foi de grande aprendizagem para o grupo na questão das tecnologias apesar das dificuldades o grupo mostrou um grau de aprendizagem maior e com o passar do tempo o grau de aprendizagem em relação as mesmas deve aumentar. Também teve grande foco nas documentações para a Release 1.
+    A sprint foi basicamente um complemento da sprint anterior, pois ela estava no intervalo da preparação para a Release 1.
 </div>
 
 ## 4.Gráfico de Burndown
@@ -126,7 +77,7 @@
 
 ## 10.Review do ScrumMaster
 <div style="text-align: justify">
-    A sprint acabou sendo apenas um complemento da sprint anterior por ter sido no intervalo da R1, e um pouco ressaca de após a entrega da mesma. Não tendo nenhuma ressalva significativa para a mesma, apenas algumas refatorações para a próxima sprint.
+    A sprint acabou sendo apenas um complemento da sprint anterior por ter sido no intervalo da R1, e um pouco ressaca de após a entrega da mesma. Não tendo nenhuma ressalva significativa para a mesma, apenas algumas refatorações do canvas do projeto e dos protótipos para a próxima sprint.
 </div>
 
 
