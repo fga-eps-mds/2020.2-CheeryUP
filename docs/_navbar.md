@@ -20,6 +20,7 @@
     - [Sprint 4](./sprints/sprint4/planning.md)
     - [Sprint 5](./sprints/sprint5/planning.md)
     - [Sprint 6](./sprints/sprint6/planning.md)
+    - [Sprint 7](./sprints/sprint7/planning.md)
 
 
 - Results
@@ -30,3 +31,4 @@
     - [Sprint 4](./sprints/sprint4/result.md)
     - [Sprint 5](./sprints/sprint5/result.md)
     - [Sprint 6](./sprints/sprint6/result.md)
+    - [Sprint 7](./sprints/sprint7/result.md)
