@@ -5,8 +5,9 @@
 1. [Informações básicas](#1---informações-básicas)
 1. [Objetivos](#2---objetivos)
 1. [Issues](#3---issues)
-1. [Pareamento](#4---pareamento)
-1. [Histórias da Sprint](#5---Histórias-da-Sprint)
+1. [Time-Box](#4---time-box)
+1. [Pareamento](#5---pareamento)
+1. [Histórias da Sprint](#6---Histórias-da-Sprint)
 
 
 ## 1 - Informações básicas
@@ -51,13 +52,20 @@
 ***Pontuação:***
 * 52 pontos planejados.
 
-## 4 - Pareamento
+## 4 - Time-Box
+|ID | Descrição | Responsável| Prazo de entrega |
+|---|--------------------|--------------|------------- |
+|[#87](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/87) | Refatoração Canvas | [DaviMatheus](https://github.com/DaviMatheus) & [Abraao1231](https://github.com/Abraao1231) | 04/04/2021 |
+|[#89](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/89) | Refatoração protótipo de alta/baixa fidelidade |  [art1505](https://github.com/art1505), [antoniotoineto](https://github.com/antoniotoineto) & [fernandes-natanael](https://github.com/fernandes-natanael) | 04/04/2021 |
+|[#91](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/91) |Reunião com psicológa | [juninhigh](https://github.com/juninhigh) & [Abraao1231](https://github.com/Abraao1231) | 04/04/2021 |
+
+## 5 - Pareamento
 * Davi e Abraao  --- Consertar bug-backend
 * Antonio e Nilvan --- Refatoração telas do front-end
 * Natanael e Nilvan --- Refatoração telas do front-end
 * Davi e Nilvan --- Integração contínua
 
-## 5 - Histórias da Sprint
+## 6 - Histórias da Sprint
 
  |ID|História|Pontos|Responsáveis|
 |:-:|:-----:|:----:|:----------:|
