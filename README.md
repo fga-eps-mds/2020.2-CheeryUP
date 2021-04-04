@@ -49,8 +49,7 @@ Para contrubuir com o projeto você deve seguir esses padrões:
 
 ## Como rodar o Cheery ?
 1. Instalar o docker e o docker-compose
-Como o projeto foi desenvolvido em containers é necessário a instalação do Docker , você pode instalar o docker [aqui](https://docs.docker.com/engine/install/), e o docker-compose [aqui](https://docs.docker.com/compose/install/)
-Após a instalação conferir se o mesmo encontra em sua máquina.
+Como o projeto foi desenvolvido em containers é necessário a instalação do Docker, você pode instalar o docker [aqui](https://docs.docker.com/engine/install/). E o docker-compose [aqui](https://docs.docker.com/compose/install/). Após a instalação conferir se o mesmo encontra em sua máquina.
 
      docker --v && docker-compose --v
 
@@ -65,7 +64,7 @@ Após a instalação conferir se o mesmo encontra em sua máquina.
 
 * Para executar o container:
 
-    make build  
+    make up 
 
 **Após esses passos o mesmo ficará disponível em** 
 
