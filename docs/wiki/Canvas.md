@@ -6,7 +6,7 @@ Data|Versão|Descrição|Autor
 04/03/2021|1.1.0|Atualização dos Clientes| Davi Matheus|
 
 <p align="center">
-	<img src="../assets/images/Canva.png" width="80%" height="80%">
+	<img src="../assets/images/canvas.png" width="80%" height="80%">
 </p>
 
 
