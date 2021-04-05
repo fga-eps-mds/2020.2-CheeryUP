@@ -3,7 +3,7 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 02/03/2021|1.0.0|Adição do Canvas| Davi Matheus|
-04/03/2021|1.1.0|Atualização dos Clientes| Davi Matheus|
+04/03/2021|1.1.0|Atualização dos Clientes| Davi Matheus e Abraão Alves|
 
 <p align="center">
 	<img src="../assets/images/canvas.png" width="80%" height="80%">
