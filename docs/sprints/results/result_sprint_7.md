@@ -19,7 +19,7 @@
 
 | | |
 |:--:|:--:|
-|*Número da sprint*|6|
+|*Número da sprint*|7|
 |*Data de início*|27/03/2021|
 |*Data de término*|01/04/2021| 
 |*Duração*|7 dias|
