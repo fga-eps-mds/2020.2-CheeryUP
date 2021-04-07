@@ -14,3 +14,4 @@ class Psicologo(models.Model):
     genero = models.CharField(default='P', max_length=1, choices=GENERO)
 
 
+    
