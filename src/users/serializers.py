@@ -8,7 +8,6 @@ from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
-        write_only=True,
         required=True,
         help_text='Leave empty if no change needed',
         # style={'input_type': 'password', 'placeholder': 'Password'}
@@ -16,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('username', 'email', 'password')
-
+    
 
 
 class PsicologoSerializer(serializers.ModelSerializer):
@@ -34,9 +33,7 @@ class PsicologoSerializer(serializers.ModelSerializer):
         :return: returns a successfully created student record
         """
         user_data = validated_data.pop('user')
-        password = user_data.pop('password')
-        user = UserSerializer.create(UserSerializer(), validated_data=user_data)
-        user.set_password('password')
+        user = User.objects.create_user(**user_data)
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
 
