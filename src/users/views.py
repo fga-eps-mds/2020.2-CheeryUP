@@ -9,10 +9,15 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.settings import api_settings
 
+from rest_framework import permissions
+
+
 
 class PsicologoViewSet(viewsets.ModelViewSet):
     queryset = Psicologo.objects.all()
     serializer_class = PsicologoSerializer
+    permission_classes = (permissions.AllowAny,)
+
 
     # def create(self, request, *args, **kwargs):
     #     serializer = self.get_serializer(data=request.data)
