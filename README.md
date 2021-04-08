@@ -96,6 +96,6 @@ Como o projeto foi desenvolvido em containers é necessário a instalação do D
         <!-- Natanael   -->
         <td align="center"><a href="https://github.com/fernandes-natanael"><img style="border-radius: 5%;" src="https://i.ibb.co/sQ813nD/natanael.jpg" width="100px;" alt=""/><br /><sub><b>Natanael Filho</b><br><b>Front-End</b></sub></a><br /></td>
         <!-- Nilvan   -->
-        <td align="center"><a href="https://github.com/juninhigh"><img style="border-radius: 5%;" src="https://i.ibb.co/KbmLWzW/nilvan.jpg" width="100px;" alt=""/><br /><sub><b>Nilvan Jr.</b><br><b>Scrum Master</b><br><b>Front-End</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/NilvanPeres"><img style="border-radius: 5%;" src="https://i.ibb.co/KbmLWzW/nilvan.jpg" width="100px;" alt=""/><br /><sub><b>Nilvan Jr.</b><br><b>Scrum Master</b><br><b>Front-End</b></sub></a><br /></td>
     </tr>
 </table>
