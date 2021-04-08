@@ -1,8 +1,10 @@
+# *ATA de Reuniões* 📝 *Sprint 08* 
+# *ATA de Reuniões* 📝 *Sprint 08* 
 ## Reunião 03 ❗
 
 | Data  | Local | Horário | Duração  | Autor | Semanal/Daily | Participantes |
 | :- | :- | :- | :- | :- | :- | :- |
-| 23/03/21 | Jitsi | 11:20h | 30h | [Davi](https://github.com/DaviMatheus)| Daily | Todos  menos Antonio|
+| 06/04/21 | Jitsi | 11:20h | 30h | [Davi](https://github.com/DaviMatheus)| Daily | Todos  menos Antonio|
 
 ***Pontos planejados***  
 
