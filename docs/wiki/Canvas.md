@@ -3,10 +3,12 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 02/03/2021|1.0.0|Adição do Canvas| Davi Matheus|
-04/03/2021|1.1.0|Atualização dos Clientes| Davi Matheus e Abraão Alves|
+04/04/2021|1.1.0|Atualização dos Clientes| Davi Matheus e Abraão Alves|
+10/04/2021|2.0.0|Refatoração do Canvas | Davi Matheus, Abraão Alves, Nilvan Perez|
+10/04/2021|2.0.1|Revisão do Canvas | Lucas e Arthur| 
 
 <p align="center">
-	<img src="../assets/images/canvas.png" width="80%" height="80%">
+	<a href="https://ibb.co/xDT6QFk"><img src="https://i.ibb.co/G0SRjH6/Canvas.png" alt="Canvas" border="0"></a>
 </p>
 
 
