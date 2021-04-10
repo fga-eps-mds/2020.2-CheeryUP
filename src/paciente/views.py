@@ -23,11 +23,11 @@ class PacienteDelete(GenericViewSet, mixins.DestroyModelMixin):
 
     serializer_class = PacienteSerializer
     queryset = Paciente.objects.all()
-    lookup_field = 'nome'
+    lookup_field = 'cpf'
 
 class PacienteUpdate(GenericViewSet, mixins.UpdateModelMixin):
 
     serializer_class = PacienteSerializer
     queryset = Paciente.objects.all()
-    lookup_field = 'nome'
+    lookup_field = 'cpf'
 
