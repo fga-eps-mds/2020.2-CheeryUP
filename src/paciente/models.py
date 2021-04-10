@@ -33,3 +33,6 @@ class Paciente(models.Model):
     situacao = models.CharField(default = True,blank=False, max_length=2, choices=SITUACAO)
     descricao = models.TextField(blank=True, null=True)
     
+    def __str__(self):
+        return self.nome
+        return self.situaçao
