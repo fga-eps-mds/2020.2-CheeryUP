@@ -20,8 +20,8 @@ Exemplos do gitflow das branches:
 
   Regras:
 
-  1. Existe apenas uma branch **master**.
-  2. **Não** são permitidos commits feitos diretamente na **master**.
+  1. Existe apenas uma branch **main**.
+  2. **Não** são permitidos commits feitos diretamente na **main**.
 
 
 - A branch **development** contém a versão mais atualizada do código que está sendo desenvolvido. Essa branch está sempre sincronizada com a **main** e é base para as branches **feature**.
