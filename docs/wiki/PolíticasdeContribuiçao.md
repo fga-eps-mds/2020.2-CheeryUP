@@ -43,7 +43,6 @@ Exemplos do gitflow das branches:
 
   `feature/titulo-da-issue`
 
-
 - A branch **release** representa o conjunto de funcionalidades provenientes de um ponto específico da branch **develop**. Essa branch contém funcionalidades prontas que, provavelmente, estarão presentes na próxima versão estável do produto. Apenas **bug fixes** são permitidos nessa branch.
 
   Regras:
@@ -56,9 +55,6 @@ Exemplos do gitflow das branches:
 
   `release/vNúmero-da-versão`
 
-
-
-
 - As branches do tipo **bugfix** são utilizadas para implementar soluções para bugs, encontrados através de testes realizados em releases específicas, na branch **release**. Isso significa que a branch **bugfix** deve ter a branch **release** como sua origem e fim.
 
   Regras:
@@ -70,29 +66,10 @@ Exemplos do gitflow das branches:
 
   `bugfix/issueID-titulo-da-issue`
 
-
-
-  A branch **hotfix** é utilizada para implementar soluções para problemas urgentes encontrados no ambiente de produção. Isso significa que essa branch deve ter a branch **master** como sua orgigem e fim.
-
-
-- Regras:
-
-  1. Essa branch sempre é criada a partir da branch **master**.
-2. Essa branch sempre é mesclada à branch **master**.
-
-  Regras de nomenclatura:
-
-  `hotfix/issueID-titulo-da-issue`
-
-
-
-
 Observações: O título da issue utilizado no nome das branches deve ser mantido em português.
 
 
  Imagens para ajudar a visualizar o fluxo de trabalho descrito:
-
-  ![](https://fpy.cz/pub/slides/git-workshop/images/gitflow.png)
 
   ![](https://miro.medium.com/max/640/0*FTwKYpFGADX-5Y0O)
 
@@ -113,12 +90,6 @@ Categorias:
 - _**feat**_: Adição/atualização de nova funcionalidade.
 - _**test**_: Adição/modifição de um teste.
 - _**refact**_: Refatoração do código.
-
-É possível fechar uma issue automaticamente adicionando a palavra chave "Fix" antes do id da issue:
-
-Fix categoria_ConciseMessage #issueID
- 
-
 # Política de migrações
 
 As migrações criadas automaticamente pelo Django devem ser adicionadas nos commits dos desenvolvedores, exceto quando possuirem "_auto_" ou "_merge_" em seu nome.
