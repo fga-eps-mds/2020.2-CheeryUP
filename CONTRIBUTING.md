@@ -16,6 +16,11 @@ Primeiramente, antes de enviar uma alteração para o codigo , para garantir que
 2. Ao criar a issue, espere a resposta de uns dos responsáveis pelo repositório
 para sua aprovação.
 3. Sua issue deve estar seguindo os padrões de [Issues](https://github.com/fga-eps-mds/MDS-2020-2-G7/blob/main/docs/templates/issue_template.md) do projeto.
+
+## Políticas de Branches e Commits
+1. Certifique de seguir os seguintes padrões de branches e commit's, tais regras podem ser encontradas [aqui](https://github.com/fga-eps-mds/2020.2-CheeryUP/blob/GitFlow/docs/wiki/Pol%C3%ADticasdeContribui%C3%A7ao.md)
+2. Após o merge de PR's aceitos, a branch da solicitação deve ser deletada para não ter poluição do workflow.
+
  
 ## Processo de Pull Request
 
