@@ -16,7 +16,7 @@ Para a criação de branches, deve ser seguido as seguintes políticas abaixo.
 
 Exemplos do gitflow das branches:
 
-- A branch **master** concentra uma versão estável do produto, contendo código já testado e versionado, pronto para ser entregue ao usuário final ou cliente. Essa branch parte da branch **develop** através de pull requests aprovados no fim de cada release.
+- A branch **main** concentra uma versão estável do produto, contendo código já testado e versionado, pronto para ser entregue ao usuário final ou cliente. Essa branch parte da branch **development** através de pull requests aprovados no fim de cada release.
 
   Regras:
 
@@ -24,31 +24,31 @@ Exemplos do gitflow das branches:
   2. **Não** são permitidos commits feitos diretamente na **master**.
 
 
-- A branch **develop** contém a versão mais atualizada do código que está sendo desenvolvido. Essa branch está sempre sincronizada com a **master** e é base para as branches **feature**.
+- A branch **development** contém a versão mais atualizada do código que está sendo desenvolvido. Essa branch está sempre sincronizada com a **main** e é base para as branches **feature**.
 
   Regras:
 
-  1. Existe apenas uma branch **develop**.
-  2. Essa branch está sempre sincronizada com a branch **master**.
+  1. Existe apenas uma branch **development**.
+  2. Essa branch está sempre sincronizada com a branch **main**.
 
 
-- As branches **feature** representam as funcionalidades do sistema a serem desenvolvidas, elas devem ter a branch **develop** como sua origem e fim.
+- As branches **feature** representam as funcionalidades do sistema a serem desenvolvidas, elas devem ter a branch **development** como sua origem e fim.
 
   Regras:
 
-  1. Essa branch sempre é criada a partir da branch **develop**.
-  2. Essa branch sempre é mesclada à branch **develop**.
+  1. Essa branch sempre é criada a partir da branch **development**.
+  2. Essa branch sempre é mesclada à branch **development**.
 
   Regras de nomenclatura:
 
   `feature/titulo-da-issue`
 
-- A branch **release** representa o conjunto de funcionalidades provenientes de um ponto específico da branch **develop**. Essa branch contém funcionalidades prontas que, provavelmente, estarão presentes na próxima versão estável do produto. Apenas **bug fixes** são permitidos nessa branch.
+- A branch **release** representa o conjunto de funcionalidades provenientes de um ponto específico da branch **development**. Essa branch contém funcionalidades prontas que, provavelmente, estarão presentes na próxima versão estável do produto. Apenas **bug fixes** são permitidos nessa branch.
 
   Regras:
 
-  1. Essa branch sempre é criada a partir da branch **develop**.
-  2. Essa branch sempre é mesclada às branches **develop** e **master**.
+  1. Essa branch sempre é criada a partir da branch **development**.
+  2. Essa branch sempre é mesclada às branches **development** e **master**.
   3. Essa branch aceita apenas mesclagens de branches do tipo **bugfix**.
 
   Regras de nomenclatura:
