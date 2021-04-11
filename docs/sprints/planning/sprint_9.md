@@ -62,7 +62,7 @@
 |[#103](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/103) |Estudar e Implementar Testes Unitários| [mibasFerraz](https://github.com/mibasFerraz), [DaviMatheus](https://github.com/DaviMatheus) & [Abraao1231](https://github.com/Abraao1231) | 9 |
 
 ***Pontuação:***
-* 92 pontos planejados.
+* 95 pontos planejados.
 
 ## 4 - Time-Box
 |ID | Descrição | Responsável| Prazo de entrega |
