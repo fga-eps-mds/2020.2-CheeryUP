@@ -156,12 +156,12 @@ Por essa razão, se você quer aprender a manipular esta biblioteca e extrair de
 * Front-end
 
 *  React JS: biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
-       * Public: pacote mais externo, que contém um mais interno, "Images", responsável pelo armazenamento de imagens a serem utilizadas na realização do projeto.
-       * Components: pacote mais externo, que contém um mais interno, "Forms", responsável pelas funcionalidades relativas aos formulários a serem utilizados na realização do projeto.
-       * Style: pacote mais externo, que contém um mais interno, "CSS", responsável pelo armazenamento de arquivos relacionados à personalização do conteúdo visível.
-       * Tests: pacote responsável pelo armazenamento de informações relativas aos testes unitários a serem realizados durante o projeto.
-       * Screen: pacote mais externo, que contém um mais interno, "Pages", responsável pelo armazenamento do conteúdo que produzirá, efetivamente, a interação com o usuário por meio das páginas web.
-       * Docker-Compose: conjunto de containers dockers. 
+    * Public: pacote mais externo, que contém um mais interno, "Images", responsável pelo armazenamento de imagens a serem utilizadas na realização do projeto.
+    * Components: pacote mais externo, que contém um mais interno, "Forms", responsável pelas funcionalidades relativas aos formulários a serem utilizados na realização do projeto.
+    * Style: pacote mais externo, que contém um mais interno, "CSS", responsável pelo armazenamento de arquivos relacionados à personalização do conteúdo visível.
+    * Tests: pacote responsável pelo armazenamento de informações relativas aos testes unitários a serem realizados durante o projeto.
+    * Screen: pacote mais externo, que contém um mais interno, "Pages", responsável pelo armazenamento do conteúdo que produzirá, efetivamente, a interação com o usuário por meio das páginas web.
+    * Docker-Compose: conjunto de containers dockers. 
 
 * Backend
 
