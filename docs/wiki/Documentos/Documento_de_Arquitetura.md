@@ -18,6 +18,7 @@
 | 1.2.4 | 24/03/2021  | Arthur Talles | Adição do tópico 2.3 |
 | 1.2.5 | 25/03/2021  | Davi Matheus | Mudanças no diagrama casos de Uso |
 | 2.0.0.| 11/04/2021  | Davi Matheus | Adição da documenação do Django Rest |
+| 2.0.1 | 11/04/2021  | Arthur Talles | Adição da documentação do React |
 ## Sumário
 [1 - Introdução](#1---introdução)
 * [1.1 - Objetivo](#1.1---objetivo)
@@ -116,6 +117,17 @@ A estrutura Django REST é um kit de ferramentas poderoso e flexível para a con
 O Django Rest funciona como um complemento ao Django, isso significa que é necessária a instalação do Django, e consequentemente, do Rest Framework.
 
 ### 2.1.2 Front-end
+###  React JS
+
+React JS é uma biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
+
+Criado em 2011 pelo time do Facebook, o React surgiu com o objetivo de otimizar a atualização e a sincronização de atividades simultâneas no feed de notícias da rede social, entre eles chat, status, listagem de contatos e outros.
+
+A princípio, todas essas atividades, chamadas de estados, tinham uma descrição muito complexa. Com o React, esta descrição torna-se mais simples, bem como também é simplificada a conexão entre HTML, CSS e JavaScript e todos os componentes de uma página.
+
+O JS é uma das mais versáteis e populares linguagens de programação do mundo e conta com um grande número de bibliotecas e outras tecnologias que a utilizam. Entre elas, Node.js, Angular, VueJS, jQuery, Ember.js e, é claro, o React.
+
+Por essa razão, se você quer aprender a manipular esta biblioteca e extrair dela todo o seu potencial, é preciso antes ter uma sólida base de conhecimento em JavaScript, bem como em suas outras duas linguagens de marcação: HTML e CSS.
 
 
 ### 2.2 - Tecnologias
@@ -141,6 +153,15 @@ O Django Rest funciona como um complemento ao Django, isso significa que é nece
 	<img src="../../assets/diagrama/Diagrama Pacote Back-end e Front-end.png" width="90%" height="90%">
 </p>
 
+* Front-end
+
+*  React JS: biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
+       * Public: pacote mais externo, que contém um mais interno, "Images", responsável pelo armazenamento de imagens a serem utilizadas na realização do projeto.
+       * Components: pacote mais externo, que contém um mais interno, "Forms", responsável pelas funcionalidades relativas aos formulários a serem utilizados na realização do projeto.
+       * Style: pacote mais externo, que contém um mais interno, "CSS", responsável pelo armazenamento de arquivos relacionados à personalização do conteúdo visível.
+       * Tests: pacote responsável pelo armazenamento de informações relativas aos testes unitários a serem realizados durante o projeto.
+       * Screen: pacote mais externo, que contém um mais interno, "Pages", responsável pelo armazenamento do conteúdo que produzirá, efetivamente, a interação com o usuário por meio das páginas web.
+       * Docker-Compose: conjunto de containers dockers. 
 
 * Backend
 
