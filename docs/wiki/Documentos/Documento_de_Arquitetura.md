@@ -17,6 +17,8 @@
 | 1.2.3 | 23/03/2021  | Lucas Lima | Adição dos tópicos 6, 7 e 8 |
 | 1.2.4 | 24/03/2021  | Arthur Talles | Adição do tópico 2.3 |
 | 1.2.5 | 25/03/2021  | Davi Matheus | Mudanças no diagrama casos de Uso |
+| 2.0.0.| 11/04/2021  | Davi Matheus | Adição da documenação do Django Rest |
+| 2.0.1 | 11/04/2021  | Arthur Talles | Adição da documentação do React |
 ## Sumário
 [1 - Introdução](#1---introdução)
 * [1.1 - Objetivo](#1.1---objetivo)
@@ -94,6 +96,10 @@ Este documento é dividio nas seguintes seções:
 
 
 ### 2.1 - Padrão Arquitetural
+
+### 2.1.1 Back-end 
+####  Django 
+
 O padrão de aquitetura MVC (Modelo Visão e Controle) é um modelo que contribui na otimização da velocidade entre as requisições feitas pelo comando do usuário. Cada componente da arquitetura é construído para lidar com alguma parte específica do desenvolvimento da aplicação. Os três componentes que serão utilizados nesse projeto serão destrinchados abaixo: 
 * Model: Esse componente armazena dados, e está relacionado com a parte lógica. Essa parte será desempenhada pelos framework Django e com o mySQL para a manipulação de dados;
 * View: É parte da aplicação que será visível ao usuário, a apresentação dos dados. A ferramenta que fará isso no nosso projeto é o react.js;
@@ -104,12 +110,32 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 * Template: Páginas para visualização de dados. Normalmente, é aqui que fica o HTML que será renderizado nos navegadores;
 * View: Lógica de negócio. É aqui que determinamos o que irá acontecer em nosso projeto.
 
+#### Django Rest Framework
+
+A estrutura Django REST é um kit de ferramentas poderoso e flexível para a construção de APIs da Web, em que o foco do nosso projeto  é desenvolver uma web API's de forma mais simples e ágil fatores importantíssimos devido ao pouco tempo de curso, em que, segundo a documentação oficial, o Django Rest gera uma API navegável que auxilia na usabilidade para os desenvolvedores. Além disso, possui um sistema de autenticação e serialização dos dados, esse é um dos motivos que o nosso grupo optou  para usar o Django REST Framework, porque ele torna a serialização mais fácil. 
+
+O Django Rest funciona como um complemento ao Django, isso significa que é necessária a instalação do Django, e consequentemente, do Rest Framework.
+
+### 2.1.2 Front-end
+###  React JS
+
+React JS é uma biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
+
+Criado em 2011 pelo time do Facebook, o React surgiu com o objetivo de otimizar a atualização e a sincronização de atividades simultâneas no feed de notícias da rede social, entre eles chat, status, listagem de contatos e outros.
+
+A princípio, todas essas atividades, chamadas de estados, tinham uma descrição muito complexa. Com o React, esta descrição torna-se mais simples, bem como também é simplificada a conexão entre HTML, CSS e JavaScript e todos os componentes de uma página.
+
+O JS é uma das mais versáteis e populares linguagens de programação do mundo e conta com um grande número de bibliotecas e outras tecnologias que a utilizam. Entre elas, Node.js, Angular, VueJS, jQuery, Ember.js e, é claro, o React.
+
+Por essa razão, se você quer aprender a manipular esta biblioteca e extrair dela todo o seu potencial, é preciso antes ter uma sólida base de conhecimento em JavaScript, bem como em suas outras duas linguagens de marcação: HTML e CSS.
+
 
 ### 2.2 - Tecnologias
 |tecnologias | descrição |
 | ------------------- | ------------------- |
 | Python | Linguagem para o desenvolvimento do backend |
 | Django | Framework que segue a arquitetura MTV, fará comunicação do back com o banco de dados |
+| Django Rest | Framework para criação de API's Web |
 | MkDocs | Gerador de site estático, voltado a criação de documentações markdown
 |Bootstrap |  Framework para desenvolvimento em HTML e JS. |
 | React |  Biblioteca em javascript com foco em criar inteface de usuário em páginas web. |
@@ -127,7 +153,30 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 	<img src="../../assets/diagrama/Diagrama Pacote Back-end e Front-end.png" width="90%" height="90%">
 </p>
 
+* Front-end
 
+*  React JS: biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
+    * Public: pacote mais externo, que contém um mais interno, "Images", responsável pelo armazenamento de imagens a serem utilizadas na realização do projeto.
+    * Components: pacote mais externo, que contém um mais interno, "Forms", responsável pelas funcionalidades relativas aos formulários a serem utilizados na realização do projeto.
+    * Style: pacote mais externo, que contém um mais interno, "CSS", responsável pelo armazenamento de arquivos relacionados à personalização do conteúdo visível.
+    * Tests: pacote responsável pelo armazenamento de informações relativas aos testes unitários a serem realizados durante o projeto.
+    * Screen: pacote mais externo, que contém um mais interno, "Pages", responsável pelo armazenamento do conteúdo que produzirá, efetivamente, a interação com o usuário por meio das páginas web.
+    * Docker-Compose: conjunto de containers dockers. 
+
+* Backend
+
+* Django REST API: framework para criação de API's Web.
+
+	* settings.py: o arquivo ou modulo settings.py contém a configuração do nosso project, ele que armazena as configurações da base de dados, timezone, e aplicativos externos baixados.
+	* urls.py: armazena entry-points e endpoints da API.
+	* app: diretório constituído de models, viewsets, testes, urls, serializers e admin.
+	* models: arquivo de models do app, ele contém os campos e comportamentos essenciais dos dados que você armazena. 
+	* views: arquivo de views do app.
+	* urls: mapeia as views com template de cada app.
+	* serializer: Os Serializers permitem que dados complexos, como querysets e model instances, sejam convertidos em tipos de dados Python nativos que podem ser facilmente renderizados, no nosso caso o JSON.
+	* admin: arquivo de conexão do app com o admin padrão do Django.
+	* Docker-Compose: conjunto de containers dockers.
+	* PostgreSQL: banco de dados da aplicação.
 
 ### 3 - Metas e Restrições da Arquitetura
 
@@ -257,3 +306,5 @@ O site terá uma interface simples, facilitando o acesso para qualquer pessoa, m
 > Documento de arquitetura ArBC. Disponível em: < [ https://jlucassr.github.io/ArBC-Pages/mds/Documento_de_arquitetura/ ](https://jlucassr.github.io/ArBC-Pages/mds/Documento_de_arquitetura/) > Acesso em: 25 de Fevereiro de 2021
 
 > Quickstart - Django REST framework. Disponivel em: < [https://www.django-rest-framework.org/tutorial/quickstart/](https://www.django-rest-framework.org/tutorial/quickstart/) > acesso em: 25 de Fevereiro de 2021
+
+> Introdução ao Django REST framework. Disponivel em : <[https://nelziositoe.medium.com/introducao-ao-django-rest-framework-47ecb9ae0e6b](https://nelziositoe.medium.com/introducao-ao-django-rest-framework-47ecb9ae0e6b) > acesso em : 10 de abril de 2021 
