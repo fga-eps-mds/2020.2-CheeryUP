@@ -25,7 +25,6 @@ class PsicologoSerializer(serializers.ModelSerializer):
         model = Psicologo
         fields = ('user', 'nCRP', 'bio', 'genero')
 
-
     def create(self, validated_data):
         """
         Overriding the default create method of the Model serializer.

@@ -8,16 +8,17 @@ from rest_framework.decorators import api_view, permission_classes
 from .serializers import PacienteSerializer
 
 
-
 class PacienteViewSet(GenericViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+    permission_classes = (permissions.IsAuthenticated,)
     serializer_class = PacienteSerializer
     queryset = Paciente.objects.all()
 
 
-class ProductorRegistrationAPIView(GenericViewSet, mixins.CreateModelMixin):
-	
+class PacienteRegistrationAPIView(GenericViewSet, mixins.CreateModelMixin):
+    permission_classes = (permissions.IsAuthenticated,)
     serializer_class = PacienteSerializer
     queryset = Paciente.objects.all()
+
 
 class PacienteDelete(GenericViewSet, mixins.DestroyModelMixin):
 

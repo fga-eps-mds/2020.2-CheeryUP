@@ -1,5 +1,5 @@
 from django.db import models
-
+from users.models import Psicologo
 # Create your models here.
 class Paciente(models.Model):
     GENERO = (
@@ -30,6 +30,7 @@ class Paciente(models.Model):
     nome = models.CharField('Nome completo',max_length=90)
     cpf = models.CharField(max_length=11, unique=True, default=False)
     data_nascimento = models.DateField()
+    psicologo = models.ForeignKey(Psicologo, null=False, on_delete=models.CASCADE)
     genero = models.CharField(default = True, max_length=1, choices=GENERO)
     regiao = models.CharField(max_length=3, choices=REGIAO)
     situacao = models.CharField(default = True,blank=False, max_length=2, choices=SITUACAO)
