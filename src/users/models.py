@@ -13,5 +13,6 @@ class Psicologo(models.Model):
     bio = models.TextField()
     genero = models.CharField(default='P', max_length=1, choices=GENERO)
 
-
+    def __str__(self):
+        return self.user.username
     
