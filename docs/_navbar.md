@@ -14,7 +14,7 @@
     - [Como contribuir?](./wiki/CONTRIBUTING.md)
     - [Backlog do Produto](./wiki/Product_Backlog.md)
     - [Canvas](./wiki/Canvas.md)
-    - [Protótipos](./wiki/Protóripos)
+    - [Protótipos](./wiki/Protótipos)
     - [Identidade Visual](./wiki/style_guide.md)
 
 - Plannings
