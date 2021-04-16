@@ -6,6 +6,8 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 from paciente.urls import router as paciente_router
 from users.urls import router as psicologo_router
+from users.views import ChangePasswordView
+
 
 
 
@@ -20,5 +22,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
     path('login/', include('users.urls')),
+    path('api/change-password/', ChangePasswordView.as_view(), name='change-password'),
+
     # path('api/register/', include('users.urls')),
 ]

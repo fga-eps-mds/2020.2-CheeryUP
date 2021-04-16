@@ -37,3 +37,8 @@ class PsicologoSerializer(serializers.ModelSerializer):
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
 
+class ChangePasswordSerializer(serializers.Serializer):
+    model = User
+   
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True)
