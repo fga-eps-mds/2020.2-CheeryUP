@@ -5,10 +5,17 @@
     - [Documento de visão](./wiki/Documents/Documento_de_Visao.md)
     - [Documento de metologia](./wiki/Documents/Documento_de_Metodologia.md)
     - [Termo de Abertura](./wiki/TAP.md)
-    - [Backlog do Produto](./wiki/Product_Backlog.md)
     - [Estrutura Analitica do Projeto](./wiki/EAP.md)
-    - [Canvas](./wiki/Canvas.md)
     - [Plano Gerenciamento de Riscos](./wiki/Plano_Gerenciamento_de_Riscos.md)
+
+* Produto
+    - [Como contribuir?](./wiki/CONTRIBUTING.md)
+    - [Backlog do Produto](./wiki/Product_Backlog.md)
+    - [Canvas](./wiki/Canvas.md)
+    - [Identidade Visual](./wiki/style_guide.md)
+    - Protipos 
+        - [Protótipo de Baixa](./wiki/Protótipos/baixa_fidelidade.md)
+        - [Protótipo de Alta](./wiki/Protótipos/alta_fidelidade.md)
 
 * Sprints
     - Sprint 0
@@ -35,6 +42,16 @@
      - Sprint 7
         - [Planning](./sprints/sprint7/planning.md)
         - [Results](./sprints/sprint7/result.md)
+     - Sprint 8
+        - [Planning](./sprints/sprint8/planning.md)
+        - [Results](./sprints/sprint8/result.md)
+     - Sprint 9
+        - [Planning](./sprints/sprint9/planning.md)
+        - [Results](./sprints/sprint9/result.md)
+
+
+
+
         
         
         
