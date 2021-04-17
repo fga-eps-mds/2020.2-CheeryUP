@@ -1,13 +1,10 @@
 <p align="center"><a href="image" target="_blank"><img width="600"src="./docs/assets/images/logo.png"></a></p>   
 
 <p align="center">
-
-  <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/pulls?q=is%3Apr+is%3Aclosed">
-        	 <img alt="GitHub closed pull requests " src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.2-CheeryUP?color=%23DE5D5D&logo=GitHub&style=flat-square">
-		</a>
+		
  <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/pulls?q=is%3Apr+is%3Aclosed">
         	 <img alt="GitHub closed pull requests " src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.2-CheeryUP?color=%23DE5D5D&logo=GitHub&style=flat-square">
-		</a>
+</a>
  
  <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/graphs/commit-activity">
         	 <img alt="GitHub closed issues" src="https://img.shields.io/github/commit-activity/m/fga-eps-mds/2020.2-CheeryUP?color=%2363C1B6&logo=GitHub&style=flat-square">
