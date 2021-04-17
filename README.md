@@ -1,5 +1,34 @@
 <p align="center"><a href="image" target="_blank"><img width="600"src="./docs/assets/images/logo.png"></a></p>   
 
+<p align="center">
+
+  <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/pulls?q=is%3Apr+is%3Aclosed">
+        	 <img alt="GitHub closed pull requests " src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.2-CheeryUP?color=%23DE5D5D&logo=GitHub&style=flat-square">
+		</a>
+ <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/pulls?q=is%3Apr+is%3Aclosed">
+        	 <img alt="GitHub closed pull requests " src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.2-CheeryUP?color=%23DE5D5D&logo=GitHub&style=flat-square">
+		</a>
+ 
+ <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/graphs/commit-activity">
+        	 <img alt="GitHub closed issues" src="https://img.shields.io/github/commit-activity/m/fga-eps-mds/2020.2-CheeryUP?color=%2363C1B6&logo=GitHub&style=flat-square">
+		</a>
+ <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/issues?q=is%3Aissue+is%3Aclosed">
+        	 <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/fga-eps-mds/2020.2-CheeryUP?color=%23F44545&logo=GitHub&style=flat-square">
+		</a>
+</a>
+	<a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/blob/main/LICENSE">
+		<img alt="GitHub" src="https://img.shields.io/github/license/fga-eps-mds/2020.2-CheeryUP?style=flat-square">
+	</a>
+
+</p>
+<p align="center">
+ <a href="https://isitmaintained.com/project/fga-eps-mds/2020.2-CheeryUP">
+        	 <img alt=" Github Issue Resolution " src="http://isitmaintained.com/badge/resolution/fga-eps-mds/2020.2-CheeryUP.svg">
+		</a>
+ <a href="https://isitmaintained.com/project/fga-eps-mds/2020.2-CheeryUP">
+        	 <img alt="Github Open Issues " src="http://isitmaintained.com/badge/open/fga-eps-mds/2020.2-CheeryUP.svg">
+</p>
+
 
 ## ℹ️ Sobre o projeto
 <p align="justify"> O CheeryUP é um sistema direcionado para psicólogos que foi arquitetado por Carla Silva Rocha Aguiar, com a ideia de disponibilizar uma plataforma online para prontuário de atendimento de pacientes que estão em fase de recuperação da COVID-19.</p>
