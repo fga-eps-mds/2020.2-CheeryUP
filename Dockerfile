@@ -1,9 +1,14 @@
 FROM python:3
 
-ENV PYTHONUNBUFFERED 1
+EXPOSE 8000
 
-RUN mkdir /code
-WORKDIR /code
-ADD requirements.txt /code/
-RUN pip install -r requirements.txt
-ADD . /code/
+RUN mkdir /src
+
+WORKDIR /src
+
+COPY src /src
+
+RUN pip3 install --upgrade pip && \
+    pip3 install -r requirements.txt
+
+ENV PYTHONUNBUFFERED 1
