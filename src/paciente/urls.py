@@ -1,10 +1,16 @@
-from .views import PacienteViewSet
-from rest_framework import routers
-from .views import PacienteViewSet, PacienteRegistrationAPIView ,PacienteDelete, PacienteUpdate
+from rest_framework_nested import routers
+
+# from .views import PacienteViewSet, PacienteRegistrationAPIView ,PacienteDelete, PacienteUpdate
+
+app_name = 'paciente'
+
+# router = routers.DefaultRouter()
+# router.register(r'create', PacienteRegistrationAPIView)
+# router.register(r'delete', PacienteDelete)
+# router.register(r'update', PacienteUpdate)
 
 
-router = routers.DefaultRouter()
-router.register(r'paciente', PacienteViewSet)
-router.register(r'create', PacienteRegistrationAPIView)
-router.register(r'delete', PacienteDelete)
-router.register(r'update', PacienteUpdate)
+
+
+
+
