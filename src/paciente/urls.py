@@ -1,10 +1,21 @@
-from .views import PacienteViewSet
 from rest_framework import routers
-from .views import PacienteViewSet, PacienteRegistrationAPIView ,PacienteDelete, PacienteUpdate
+
+from users.models import Psicologo
+
+# from .views import PacienteViewSet, PacienteRegistrationAPIView ,PacienteDelete, PacienteUpdate
+from .views import PacienteModelViewSet
 
 
+app_name = 'paciente'
 router = routers.DefaultRouter()
-router.register(r'paciente', PacienteViewSet)
-router.register(r'create', PacienteRegistrationAPIView)
-router.register(r'delete', PacienteDelete)
-router.register(r'update', PacienteUpdate)
+router.register(r'paciente', PacienteModelViewSet)
+
+# router.register(r'create', PacienteRegistrationAPIView)
+# router.register(r'delete', PacienteDelete)
+# router.register(r'update', PacienteUpdate)
+
+
+
+
+
+
