@@ -1,4 +1,6 @@
 from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
+from rest_framework.decorators import permission_classes
 
 # from django.core.checks.messages import Error
 # from django.shortcuts import render
@@ -41,8 +43,12 @@ from .serializers import PsicologoSerializer
 #     lookup_field = 'nCRP'
 
 
+
 class PsicologoModelViewSet(viewsets.ModelViewSet):
     serializer_class = PsicologoSerializer
     queryset = Psicologo.objects.all()
     lookup_field = 'nCRP'
 
+    # @permission_classes([AllowAny])
+    # def create(self, request, *args, **kwargs):
+    #     return super().create(request, *args, **kwargs)
