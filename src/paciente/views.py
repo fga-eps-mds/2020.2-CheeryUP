@@ -1,4 +1,6 @@
 from rest_framework import viewsets
+
+from users.models import Psicologo
 from .models import Paciente
 from .serializers import PacienteSerializer
 
@@ -30,3 +32,13 @@ class PacienteModelViewSet(viewsets.ModelViewSet):
     serializer_class = PacienteSerializer
     lookup_field = 'cpf'
 
+    def get_psicologo(self):
+        return Psicologo.objects.get(nCRP=self.kwargs['psicologo_nCRP'])
+
+    def get_queryset(self):
+        psicologo = self.get_psicologo()
+        return Paciente.objects.filter(psicologo=psicologo)
+
+    def perform_create(self, serializer):
+        psicologo = self.get_psicologo()
+        paciente = serializer.save(psicologo=psicologo)
