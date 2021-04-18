@@ -3,12 +3,12 @@
 ### Por que esse PR é necessário ?
 _**`Tipo de alteração`**_
 
-Exemplo:  
+### Tarefas realizadas nesse PR
 
--[ ] `Resolução de bugs` que no quadro de evolução dos pacientes.
-
+Exemplo 1
+- [ ] `Resolução de bugs` que no quadro de evolução dos pacientes.
 Exemplo 2:  
--[ ] Adição de `nova funcionalidade` para o psicólogo.
+- [ ] Adição de `nova funcionalidade` para o psicólogo.
 
 
 ### Descrição:
