@@ -1,16 +1,17 @@
 # from .views import PsicologoViewSet,PsicologoRegistrationAPIView, PsicologoDelete, PsicologoUpdate
-from .views import PsicologoModelViewSet
+# from .views import PsicologoModelViewSet
 from django.urls import path
 
-from rest_framework import routers
+# from rest_framework_nested import routers
+
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
 
 
-router = routers.DefaultRouter()
-router.register(r'psicologo', PsicologoModelViewSet)
+# psicologo_router = routers.DefaultRouter()
+# psicologo_router.register(r'psicologos', PsicologoModelViewSet)
 
 # router.register(r'psicologo/list', PsicologoViewSet)
 # router.register(r'psicologo/create', PsicologoRegistrationAPIView)
