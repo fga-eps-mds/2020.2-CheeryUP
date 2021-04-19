@@ -13,14 +13,39 @@ class Paciente(models.Model):
         ('AC', 'Águas Claras'),
         ('AS', 'Asa Sul'),
         ('AN', 'Asa Norte'),
+        ('AR', 'Arniqueira'), 
+        ('BZ', 'Brazilandia'),
+        ('CA', 'Candangolândia'), 
         ('CI', 'Ceilândia'),
+        ('CZ', 'Cruzeiro'), 
+        ('FE', 'Fercal'), 
         ('GA', 'Gama'),
-        ('GA', 'Guará'),
+        ('GR', 'Guará'),
+        ('IT', 'Itapoã'), 
+        ('JB', 'Jardim Botânico'),
+        ('LS', 'Lago Sul'), 
+        ('LN', 'Lago Norte'), 
+        ('NB', 'Núcleo Bandeirante'),
+        ('PW', 'Park Way'),
+        ('PA', 'Paranoá'),
+        ('Pl', 'Planaltina'),
+        ('PP', 'Plano Piloto'),
         ('RE', 'Recanto das Emas'),
         ('RF', 'Riacho Fundo'),
         ('SA', 'Samambaia'),
+        ('SM', 'Santa Maria'),
+        ('SB', 'São Sabastião'), 
+        ('SCIA', 'SCIA'), 
+        ('RF', 'Riacho Fundo'),
+        ('RF', 'Riacho Fundo II'), 
+        ('SI', 'SIA'),
         ('SO', 'Sobradinho'),
+        ('SO', 'Sobradinho II'), 
+        ('SN', 'Sol Nascente'), 
+        ('SD','Sudoeste'),
         ('TA', 'Taguatinga'),
+        ('VA',  'Varjão'), 
+        ('VP', 'Vicente Pires'),
         ('EO', 'Entre outros'),
     )
     SITUACAO = (
@@ -32,7 +57,7 @@ class Paciente(models.Model):
     data_nascimento = models.DateField()
     psicologo = models.ForeignKey(Psicologo, on_delete=models.CASCADE)
     genero = models.CharField(default = True, max_length=1, choices=GENERO)
-    regiao = models.CharField(max_length=3, choices=REGIAO)
+    regiao = models.CharField(max_length=4, choices=REGIAO)
     situacao = models.CharField(default = True,blank=False, max_length=2, choices=SITUACAO)
     descricao = models.TextField(blank=True, null=True)
     cpf = models.CharField(max_length=11, unique=True, default=False)
