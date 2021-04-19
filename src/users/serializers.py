@@ -3,8 +3,7 @@ from rest_framework import serializers
 from .models import Psicologo
 from django.contrib.auth.models import User
 
-
-
+from django.utils.translation import gettext
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
@@ -37,3 +36,10 @@ class PsicologoSerializer(serializers.ModelSerializer):
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
 
+   
+
+    def validate_nCRP(self, nCRP):
+        if len(nCRP) != 11:
+            raise serializers.ValidationError('numero de caracteres invalido')
+
+        return nCRP
