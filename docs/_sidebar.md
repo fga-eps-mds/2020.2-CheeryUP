@@ -48,6 +48,10 @@
      - Sprint 9
         - [Planning](./sprints/sprint9/planning.md)
         - [Results](./sprints/sprint9/result.md)
+    - Sprint 10
+        - [Planning](./sprints/sprint10/planning.md)
+        - [Results](./sprints/sprint10/result.md)
+
 
 
 
