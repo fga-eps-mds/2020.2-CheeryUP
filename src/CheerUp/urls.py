@@ -22,6 +22,7 @@ psicologo_router.register(r'pacientes', PacienteModelViewSet)
 # router.registry.extend(psicologo_router.registry)
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('api/', include(router.urls)),
     path('api/', include(psicologo_router.urls)),
 
