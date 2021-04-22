@@ -3,9 +3,14 @@ from rest_framework import serializers
 from .models import Psicologo
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
-from django.utils.translation import gettext
+from django.contrib.auth.validators import UnicodeUsernameValidator
+
+class MyValidator(UnicodeUsernameValidator):
+    regex = r'^[\w.@+\- ]+$'
+
 
 class UserSerializer(serializers.Serializer):
+    username_validator = MyValidator()
     username = serializers.CharField(max_length=100)
   
     email = serializers.EmailField(
@@ -37,7 +42,6 @@ class PsicologoSerializer(serializers.ModelSerializer):
         model = Psicologo
         fields = ('user', 'nCRP', 'bio', 'genero')
 
-
     def create(self, validated_data):
         """
         Overriding the default create method of the Model serializer.
@@ -48,8 +52,6 @@ class PsicologoSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**user_data)
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
-
-   
 
     def validate_nCRP(self, nCRP):
         if len(nCRP) != 11:

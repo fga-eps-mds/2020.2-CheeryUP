@@ -1,13 +1,10 @@
 
-from rest_framework.test import force_authenticate
+# from rest_framework.test import force_authenticate
 from rest_framework.test import APIRequestFactory
 from rest_framework.test import APITestCase
-
 from django.urls import reverse
-
 from users import views
 from users.models import Psicologo
-
 
 class PsicologoModelViewSetTestCase(APITestCase):
 
@@ -21,7 +18,6 @@ class PsicologoModelViewSetTestCase(APITestCase):
         )
         self.factory = APIRequestFactory()
 
-
     def test_create_psicologo(self):
         # changing zip code to create a unique property
         self.data = {
@@ -30,7 +26,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
                 "email": "afonso@solano.com",
                 "password": "afonso_mg123"
             },
-            "nCRP": "12345678912", # valid CPF
+            "nCRP": "12345678912",   # valid CPF
             "bio": "Sou o afonso solano",
             "genero": "M"
         }
@@ -41,7 +37,6 @@ class PsicologoModelViewSetTestCase(APITestCase):
         qs = Psicologo.objects.filter(nCRP=self.data['nCRP'])
         self.assertTrue(qs.exists())
 
-
     def test_sending_invalid_nCRP(self):
         # changing zip code to create a unique property
         self.data = {
@@ -50,12 +45,12 @@ class PsicologoModelViewSetTestCase(APITestCase):
                 "email": "afonso@solano.com",
                 "password": "afonso_mg123"
             },
-            "nCRP": "1", # invalid CPF
+            "nCRP": "1",  # invalid CPF
             "bio": "Sou o afonso solano",
             "genero": "M"
         }
         request = self.factory.post(self.url_list, self.data, format='json')
-        # force_authenticate(request, user=self.user) # TODO
+        # force_authenticate(request, user=self.user)  # TODO
         response = self.view_list(request)
         self.assertNotEqual(
             201,
@@ -80,7 +75,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
                 "email": "afonso@solano.com",
                 "password": "123456"
             },
-            "nCRP": "11111111111", # invalid CPF
+            "nCRP": "11111111111",   # invalid CPF
             "bio": "Sou o afonso solano",
             "genero": "M"
         }
@@ -110,7 +105,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
             "user": {
                 "username": "afonso",
                 "email": "afonso@solano.com",
-                "password": "123" # invalid password
+                "password": "123"   # invalid password
             },
             "nCRP": "12345678910", 
             "bio": "Sou o afonso solano",
@@ -124,4 +119,3 @@ class PsicologoModelViewSetTestCase(APITestCase):
             response.status_code,
             msg='Foi retornado 201 Create para uma requisição com senha inválido'
         )
-     

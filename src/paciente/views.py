@@ -1,5 +1,4 @@
 from rest_framework import viewsets
-
 from users.models import Psicologo
 from .models import Paciente
 from .serializers import PacienteSerializer
@@ -25,7 +24,6 @@ from .serializers import PacienteSerializer
 #     serializer_class = PacienteSerializer
 #     queryset = Paciente.objects.all()
 #     lookup_field = 'cpf'
-
 
 class PacienteModelViewSet(viewsets.ModelViewSet):
     queryset = Paciente.objects.all()
