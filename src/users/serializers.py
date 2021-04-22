@@ -2,21 +2,38 @@
 from rest_framework import serializers
 from .models import Psicologo
 from django.contrib.auth.models import User
+from rest_framework.validators import UniqueValidator
+from django.contrib.auth.validators import UnicodeUsernameValidator
+
+class MyValidator(UnicodeUsernameValidator):
+    regex = r'^[\w.@+\- ]+$'
 
 
-
-
-class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(
+class UserSerializer(serializers.Serializer):
+    username_validator = MyValidator()
+    username = serializers.CharField(max_length=100)
+  
+    email = serializers.EmailField(
         required=True,
-        help_text='Leave empty if no change needed',
-        # style={'input_type': 'password', 'placeholder': 'Password'}
+        validators=[UniqueValidator(queryset=User.objects.all())],
+        # unique=True,
+        label="Email Address",
     )
+    password = serializers.CharField(
+        write_only=True,
+        required=True,
+        min_length=6,
+    )
+ 
     class Meta:
         model = User
         fields = ('username', 'email', 'password')
 
-
+    def validate_password(self, password):
+        if len(password) < 6:
+            raise serializers.ValidationError('Senha fraca!')
+            
+        return password
 
 class PsicologoSerializer(serializers.ModelSerializer):
     user = UserSerializer(required=True)
@@ -24,7 +41,6 @@ class PsicologoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Psicologo
         fields = ('user', 'nCRP', 'bio', 'genero')
-
 
     def create(self, validated_data):
         """
@@ -37,3 +53,8 @@ class PsicologoSerializer(serializers.ModelSerializer):
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
 
+    def validate_nCRP(self, nCRP):
+        if len(nCRP) != 11:
+            raise serializers.ValidationError('numero de caracteres invalido')
+
+        return nCRP

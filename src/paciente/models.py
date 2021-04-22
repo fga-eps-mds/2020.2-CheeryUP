@@ -42,7 +42,7 @@ class Paciente(models.Model):
         ('SO', 'Sobradinho'),
         ('SO', 'Sobradinho II'), 
         ('SN', 'Sol Nascente'), 
-        ('SD','Sudoeste'),
+        ('SD', 'Sudoeste'),
         ('TA', 'Taguatinga'),
         ('VA',  'Varjão'), 
         ('VP', 'Vicente Pires'),
@@ -53,16 +53,15 @@ class Paciente(models.Model):
         ('M', 'Moderada'),
         ('G', 'Grave'),
     )
-    nome = models.CharField('Nome completo',max_length=90)
+    nome = models.CharField('Nome completo', max_length=90)
     data_nascimento = models.DateField()
     psicologo = models.ForeignKey(Psicologo, on_delete=models.CASCADE)
     genero = models.CharField(default = True, max_length=1, choices=GENERO)
     regiao = models.CharField(max_length=4, choices=REGIAO)
-    situacao = models.CharField(default = True,blank=False, max_length=2, choices=SITUACAO)
+    situacao = models.CharField(default = True, blank=False, max_length=2, choices=SITUACAO)
     descricao = models.TextField(blank=True, null=True)
     cpf = models.CharField(max_length=11, unique=True, default=False)
 
-
     def __str__(self):
         return self.nome
-
+        
