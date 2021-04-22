@@ -14,6 +14,10 @@
 - atualização do documento de arquitetura.
 - Estudar e escolher melhores ferramentas para uma integração continua.
 - Treinamento e implementação do docker.
-- implementação do castro do psicologo.
+- implementação da US01-Cadastro Psicologo.
+- Integração  Continua 
+- Implementação dos modulos do Banco de Dado.
+- Organização do planejamento de Horario/Identidade Visual/ATAS
 
-<p align = "center"> &emsp;&emsp; <img src="../assets/images/RoadMap_DevOps.png" width="455" height="535"/> </p>
+
+<p align = "center"> &emsp;&emsp; <img src="../assets/images/RoadMap_DevOps.png" width="493" height="758"/> </p>

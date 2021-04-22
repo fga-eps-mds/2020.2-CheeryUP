@@ -4,8 +4,10 @@ services:
   web:
     build:
       context: .
+
       dockerfile: ./Dockerfile
     command: ["./startup.sh"]
+
     ports:
       - 8000:8000
     volumes:

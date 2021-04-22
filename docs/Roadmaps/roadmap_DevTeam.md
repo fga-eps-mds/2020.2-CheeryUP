@@ -14,5 +14,8 @@
 - Treinamento e implementação do docker.
 - Analisar e Implementar Possíveis ideias de RoadMaps
 - Organizar e implementar front/back
+- Protitpo de Alta/Baixa Fidelidade
+- Estudo das Ferramentes/Framework Back/Front
+- Atualização do README
 
-<p align = "center"> &emsp;&emsp; <img src="../assets/images/RoadMap_DevTeam.png" width="435" height="515"/> </p>
+<p align = "center"> &emsp;&emsp; <img src="../assets/images/RoadMap_DevTeam.png" width="435" height="776"/> </p>

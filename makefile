@@ -1,4 +1,3 @@
- 
 dkc := "docker-compose.yml"
 
 up: 

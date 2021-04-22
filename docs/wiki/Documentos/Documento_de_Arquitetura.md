@@ -13,7 +13,12 @@
 | 1.1.3 | 10/03/2021  |Lucas Lima | Adição do MTV ao Padrão Arquitetural |
 | 1.2.0 | 14/03/2021  | Antônio | Atualização geral do documento |  
 | 1.2.1 | 15/03/2021  | Davi | Atualização do topico 5 | 
-| 1.2.2 | 16/03/2021  | Lucas | Atualização no tópico 2.2 |
+| 1.2.2 | 16/03/2021  | Lucas Lima | Atualização no tópico 2.2 |
+| 1.2.3 | 23/03/2021  | Lucas Lima | Adição dos tópicos 6, 7 e 8 |
+| 1.2.4 | 24/03/2021  | Arthur Talles | Adição do tópico 2.3 |
+| 1.2.5 | 25/03/2021  | Davi Matheus | Mudanças no diagrama casos de Uso |
+| 2.0.0.| 11/04/2021  | Davi Matheus | Adição da documenação do Django Rest |
+| 2.0.1 | 11/04/2021  | Arthur Talles | Adição da documentação do React |
 ## Sumário
 [1 - Introdução](#1---introdução)
 * [1.1 - Objetivo](#1.1---objetivo)
@@ -25,6 +30,7 @@
 
 * [2.1 - Padrão Arquitetural](###2.1---Padrão-Arquitetural)
 * [2.2 - Tecnologias](#2.2---Tecnologias)
+* [2.3 - Diagrama de Pacotes](#2.3---Diagrama-de-Pacote)
 
 [3 - Metas e Restrições da Arquitetura](#3---Metas-e-Restrições-da-Arquitetura)
 
@@ -42,6 +48,14 @@
 * [5.1 - Diagrama de caso de Uso](#5.1---Diagrama-de-caso-de-Uso)
 * [5.2 - Atores de Caso de Uso](#5.2---Atores-de-Caso-de-Uso)
 * [5.3 - Descrições de Caso de Uso](#5.3---Descrições-de-Caso-de-Uso)
+
+[ 6 - Visão Lógica](#6---Visão-Lógica)
+
+[ 7 - Tamanho e Desempenho](#7---Tamanho-e-Desempenho)
+* [7.1 - Tamanho](#7.1---Tamanho)
+* [7.2 - Desempenho](#7.2---Desempenho)
+
+[ 8 - Qualidade](#8---Qualidade)
 ## 1 - Introdução
 
 ### 1.1 - Objetivo 
@@ -82,6 +96,10 @@ Este documento é dividio nas seguintes seções:
 
 
 ### 2.1 - Padrão Arquitetural
+
+### 2.1.1 Back-end 
+####  Django 
+
 O padrão de aquitetura MVC (Modelo Visão e Controle) é um modelo que contribui na otimização da velocidade entre as requisições feitas pelo comando do usuário. Cada componente da arquitetura é construído para lidar com alguma parte específica do desenvolvimento da aplicação. Os três componentes que serão utilizados nesse projeto serão destrinchados abaixo: 
 * Model: Esse componente armazena dados, e está relacionado com a parte lógica. Essa parte será desempenhada pelos framework Django e com o mySQL para a manipulação de dados;
 * View: É parte da aplicação que será visível ao usuário, a apresentação dos dados. A ferramenta que fará isso no nosso projeto é o react.js;
@@ -92,12 +110,32 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 * Template: Páginas para visualização de dados. Normalmente, é aqui que fica o HTML que será renderizado nos navegadores;
 * View: Lógica de negócio. É aqui que determinamos o que irá acontecer em nosso projeto.
 
+#### Django Rest Framework
+
+A estrutura Django REST é um kit de ferramentas poderoso e flexível para a construção de APIs da Web, em que o foco do nosso projeto  é desenvolver uma web API's de forma mais simples e ágil fatores importantíssimos devido ao pouco tempo de curso, em que, segundo a documentação oficial, o Django Rest gera uma API navegável que auxilia na usabilidade para os desenvolvedores. Além disso, possui um sistema de autenticação e serialização dos dados, esse é um dos motivos que o nosso grupo optou  para usar o Django REST Framework, porque ele torna a serialização mais fácil. 
+
+O Django Rest funciona como um complemento ao Django, isso significa que é necessária a instalação do Django, e consequentemente, do Rest Framework.
+
+### 2.1.2 Front-end
+###  React JS
+
+React JS é uma biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
+
+Criado em 2011 pelo time do Facebook, o React surgiu com o objetivo de otimizar a atualização e a sincronização de atividades simultâneas no feed de notícias da rede social, entre eles chat, status, listagem de contatos e outros.
+
+A princípio, todas essas atividades, chamadas de estados, tinham uma descrição muito complexa. Com o React, esta descrição torna-se mais simples, bem como também é simplificada a conexão entre HTML, CSS e JavaScript e todos os componentes de uma página.
+
+O JS é uma das mais versáteis e populares linguagens de programação do mundo e conta com um grande número de bibliotecas e outras tecnologias que a utilizam. Entre elas, Node.js, Angular, VueJS, jQuery, Ember.js e, é claro, o React.
+
+Por essa razão, se você quer aprender a manipular esta biblioteca e extrair dela todo o seu potencial, é preciso antes ter uma sólida base de conhecimento em JavaScript, bem como em suas outras duas linguagens de marcação: HTML e CSS.
+
 
 ### 2.2 - Tecnologias
 |tecnologias | descrição |
 | ------------------- | ------------------- |
 | Python | Linguagem para o desenvolvimento do backend |
 | Django | Framework que segue a arquitetura MTV, fará comunicação do back com o banco de dados |
+| Django Rest | Framework para criação de API's Web |
 | MkDocs | Gerador de site estático, voltado a criação de documentações markdown
 |Bootstrap |  Framework para desenvolvimento em HTML e JS. |
 | React |  Biblioteca em javascript com foco em criar inteface de usuário em páginas web. |
@@ -109,7 +147,36 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 |JavaScript |  Alia-se no desenvolvimento do frontend junto com HTML e CSS|
 |mySQL | Banco de dados relacional, será usado para gerir a base de dados|
 
-  
+### 2.3 Diagrama de Pacotes
+
+  <p align="center">
+	<img src="../../assets/diagrama/Diagrama Pacote Back-end e Front-end.png" width="90%" height="90%">
+</p>
+
+* Front-end
+
+*  React JS: biblioteca JavaScript para a criação de interfaces de usuário — ou UI (user interface).
+    * Public: pacote mais externo, que contém um mais interno, "Images", responsável pelo armazenamento de imagens a serem utilizadas na realização do projeto.
+    * Components: pacote mais externo, que contém um mais interno, "Forms", responsável pelas funcionalidades relativas aos formulários a serem utilizados na realização do projeto.
+    * Style: pacote mais externo, que contém um mais interno, "CSS", responsável pelo armazenamento de arquivos relacionados à personalização do conteúdo visível.
+    * Tests: pacote responsável pelo armazenamento de informações relativas aos testes unitários a serem realizados durante o projeto.
+    * Screen: pacote mais externo, que contém um mais interno, "Pages", responsável pelo armazenamento do conteúdo que produzirá, efetivamente, a interação com o usuário por meio das páginas web.
+    * Docker-Compose: conjunto de containers dockers. 
+
+* Backend
+
+* Django REST API: framework para criação de API's Web.
+
+	* settings.py: o arquivo ou modulo settings.py contém a configuração do nosso project, ele que armazena as configurações da base de dados, timezone, e aplicativos externos baixados.
+	* urls.py: armazena entry-points e endpoints da API.
+	* app: diretório constituído de models, viewsets, testes, urls, serializers e admin.
+	* models: arquivo de models do app, ele contém os campos e comportamentos essenciais dos dados que você armazena. 
+	* views: arquivo de views do app.
+	* urls: mapeia as views com template de cada app.
+	* serializer: Os Serializers permitem que dados complexos, como querysets e model instances, sejam convertidos em tipos de dados Python nativos que podem ser facilmente renderizados, no nosso caso o JSON.
+	* admin: arquivo de conexão do app com o admin padrão do Django.
+	* Docker-Compose: conjunto de containers dockers.
+	* PostgreSQL: banco de dados da aplicação.
 
 ### 3 - Metas e Restrições da Arquitetura
 
@@ -137,7 +204,7 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 | email | Obrigatório | String | Email do Psicólogo |
 | nCRP | Obrigatório | Integer | Número do Conselho Regional do Psicólogo |
 | senha | Obrigatório | String | Senha de login |
-| listaPacientes | Obrigatório | Paciente | Lista de pacientes do psicólogo|
+| listaPacientes | Optativo | Paciente | Lista de pacientes do psicólogo|
 
 * ### Paciente
 |Atributos| Propriedade | Tipo | Descrição|
@@ -149,7 +216,7 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 | genero | Obrigatório | Char | Gênero do paciente |
 | regiao | Obrigatório | String | Região onde mora o paciente |
 | descricao | Optativo | String | Descrição do caso do paciente |
-| listaConsulta | Obrigatório | Consulta | Lista das consultas do paciente |
+| listaConsulta | Optativo | Consulta | Lista das consultas do paciente |
 
 
 * ### Consulta
@@ -187,7 +254,7 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 ### 5.1 - Diagrama de caso de Uso
 
 <p align="center">
-	<img src = "../../assets/diagrama/Caso de uso.png"  width="80%" height="80%">
+	<img src = "../../assets/diagrama/Caso_De_Uso.png"  width="80%" height="80%">
 </p>
 
 
@@ -202,12 +269,42 @@ O Django utiliza o MTV (Modelo de template e visão). Toda esta arquitetura é i
 
 |Casos de uso| Ator | Descrição|
 |-----|-----|------|
-| UC01 - Efeituar Login | Psicologo | O psicologo poderá realizar seu cadastro e dar login e logout na plataforma quando quiser |
-| UC02 - Cadastrar/Exlcluir paciente | Psicologo | O psicólogo poderá acessar cadastrar ou exluir um paciente em específico |
-| UC02 - Alterar perfil Psicologo | Psicólogo | O psicologo poderá alterar seu perfil quando desejar |
-| UC03 - Alterar perfil Paciente| Psicologo | O psicologo poderá alterar o perfil dos seus pacientes quando desejar |
-| UC04 - Mostrar pacientes cadastrados | Psicologo |  O psicólogo poderá acessar e visualizar as informações de um paciente em específico   |
-| UC04 - Acessar laudo dos pacientes | Psicologo | O psicólogo poderá acessar os laudos que ele preencher |
-| UC05 - Adicionar novos laudos a pacientes | Psicologo | O psicólogo pode inserir os laudos dos seus pacientes |
-| UC06 - Acessar Dashboards|  Psicologo | O psicólogo poderá ver os dashbords de saúde mental disponiblizados pela comunidade |
-| UC07 - Acessso aos quadros evolutivos | O psicólogo poderá acessar o quadro evolutivo de um paciente específico | 
+| UC01 - Editar Dados da Conta | Psicologo | O psicologo poderá realizar seu cadastro e dar login e logout na plataforma quando quiser |
+| UC02 - Acesar a Pagina do Psicologo | Psicologo | O psicologo poderá acessar a pagina cadastra, fazer o login e realizar as determinadas funções presentes no site.
+| UC03 - Cadastrar/Exlcluir paciente | Psicologo | O psicólogo poderá acessar cadastrar ou exluir um paciente em específico |
+| UC04 - Alterar dados do  Paciente| Psicologo | O psicologo poderá alterar o perfil dos seus pacientes quando desejar |
+| UC05 - listar Pacientes | Psicologo |  O psicólogo poderá acessar e visualizar as informações de um paciente em específico   |
+| UC06 - Acessar consulta dos pacientes | Psicologo | O psicólogo poderá acessar as consultas que ele preencher |
+| UC07 - Alterar relatorio Consulta | Psicologo | O psicólogo podera alterar os dados da consulta |
+| UC08 - Acessar Dashboards |  Psicologo | O psicólogo poderá ver os dashbords de saúde mental disponiblizados pela comunidade |
+
+## 6 - Visão Lógica
+
+O psicólogo acessa o site através de um computador ou celular, realiza seu cadastro com CRP, faz o login, cadastra seus pacientes e atualiza os dados. Após ter os dados atualizados com as informações adquiridas na consulta, são gerados relatórios com infográficos.\
+Os dados do psicólogo e dos clientes serão armazenados no banco de dados. No momento em que o psicólogo atualizar os dados, automaticamente os infográficos serão gerados e disponibilizados para que sejam vistos. 
+
+## 7 - Tamanho e Desempenho
+### 7.1 - Tamanho
+O software é feito para rodar diretamente no navegador, sem qualquer tipo de instalação fora o próprio navegador.
+
+### 7.2 - Desempenho
+Basicamente todas as ações realizadas no front-end enviam requisições ao back-end para serem feitas. Por exemplo, no cadastro do psicólogo é feita uma requisição ao back-end para guardar os dados no banco de dados e utilizar posteriormente. Não há requisitos computacionais para que o site seja aberto.
+
+## 8 - Qualidade
+O site terá uma interface simples, facilitando o acesso para qualquer pessoa, mesmo que ela não tenha muita facilidade com tecnologia, e garantindo a plena funcionalidade proposta. Nada do back-end será mostrado ao psicólogo, apenas a parte inteligível do front-end.
+
+## Referências 
+
+>  Django Documentation. Disponivel em: < [https://docs.djangoproject.com/en/3.1/](https://docs.djangoproject.com/en/3.1/) > Acesso em: 17 de Fevereiro de 2021 
+
+> React Documentation. Disponivel em: < [https://pt-br.reactjs.org/docs/getting-started.html](https://pt-br.reactjs.org/docs/getting-started.html) > Acesso em: 17 de Fevereiro de 2021
+
+> About PostgreSQL. Disponível em: < [https://www.postgresql.org/about/](https://www.postgresql.org/about/) > Acesso em 17 de Março de 2021
+
+> Documento de arquitetura Acácia. Disponível em: < [https://fga-eps-mds.github.io/2019.2-Acacia/#/architecture_document](https://fga-eps-mds.github.io/2019.2-Acacia/#/architecture_document) > Acesso em: 25 de Fevereiro de 2021
+
+> Documento de arquitetura ArBC. Disponível em: < [ https://jlucassr.github.io/ArBC-Pages/mds/Documento_de_arquitetura/ ](https://jlucassr.github.io/ArBC-Pages/mds/Documento_de_arquitetura/) > Acesso em: 25 de Fevereiro de 2021
+
+> Quickstart - Django REST framework. Disponivel em: < [https://www.django-rest-framework.org/tutorial/quickstart/](https://www.django-rest-framework.org/tutorial/quickstart/) > acesso em: 25 de Fevereiro de 2021
+
+> Introdução ao Django REST framework. Disponivel em : <[https://nelziositoe.medium.com/introducao-ao-django-rest-framework-47ecb9ae0e6b](https://nelziositoe.medium.com/introducao-ao-django-rest-framework-47ecb9ae0e6b) > acesso em : 10 de abril de 2021 
