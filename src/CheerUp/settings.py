@@ -14,6 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 import os
 import django_heroku
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -93,6 +94,8 @@ DATABASES = {
         'HOST': 'db',
         'PORT': 5432
     },
+    db_from_env = dj_database_url.config()
+    DATABASES['default'].update(db_from_env)
     # 'sqlite3': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
@@ -153,11 +156,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
 
-CORS_ALLOWED_ORIGINS = [
-
-    "http://localhost:3000",
-
-]
+CORS_ORIGIN_ALLOW_ALL = True
+ROOT_URLCONF = 'myproject.urls'
 
 django_heroku.settings(locals())
