@@ -2,22 +2,38 @@
 from rest_framework import serializers
 from .models import Psicologo
 from django.contrib.auth.models import User
+from rest_framework.validators import UniqueValidator
+from django.contrib.auth.validators import UnicodeUsernameValidator
+
+class MyValidator(UnicodeUsernameValidator):
+    regex = r'^[\w.@+\- ]+$'
 
 
-
-
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.Serializer):
+    username_validator = MyValidator()
+    username = serializers.CharField(max_length=100)
+  
+    email = serializers.EmailField(
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all())],
+        # unique=True,
+        label="Email Address",
+    )
     password = serializers.CharField(
         write_only=True,
         required=True,
-        help_text='Leave empty if no change needed',
-        # style={'input_type': 'password', 'placeholder': 'Password'}
+        min_length=6,
     )
+ 
     class Meta:
         model = User
         fields = ('username', 'email', 'password')
 
-
+    def validate_password(self, password):
+        if len(password) < 6:
+            raise serializers.ValidationError('Senha fraca!')
+            
+        return password
 
 class PsicologoSerializer(serializers.ModelSerializer):
     user = UserSerializer(required=True)
@@ -26,7 +42,6 @@ class PsicologoSerializer(serializers.ModelSerializer):
         model = Psicologo
         fields = ('user', 'nCRP', 'bio', 'genero')
 
-
     def create(self, validated_data):
         """
         Overriding the default create method of the Model serializer.
@@ -34,9 +49,12 @@ class PsicologoSerializer(serializers.ModelSerializer):
         :return: returns a successfully created student record
         """
         user_data = validated_data.pop('user')
-        password = user_data.pop('password')
-        user = UserSerializer.create(UserSerializer(), validated_data=user_data)
-        user.set_password('password')
+        user = User.objects.create_user(**user_data)
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
 
+    def validate_nCRP(self, nCRP):
+        if len(nCRP) != 11:
+            raise serializers.ValidationError('numero de caracteres invalido')
+
+        return nCRP

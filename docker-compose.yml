@@ -4,27 +4,30 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
-    
-    command: bash -c " 
-        python3 manage.py makemigrations &&
-        python3 manage.py migrate &&
-        chmod +x scripts/create_superuser.sh &&
-        ./scripts/create_superuser.sh &&
-        python manage.py runserver 0.0.0.0:8000"
-    volumes:
-      - .:/code
+
+      dockerfile: ./Dockerfile
+    command: ["./startup.sh"]
+
     ports:
       - 8000:8000
+    volumes:
+      - ./src/:/src
+      - pip_cache:/usr/local/lib/python3/site-packages
     depends_on:
       - db
+    env_file:
+      - ./.envs/.postgres
+
   db:
     image: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    restart: unless-stopped
+    ports:
+      - 5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.envs/.postgres
 
 volumes:
   postgres_data:
+  pip_cache:
