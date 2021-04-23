@@ -2,4 +2,4 @@
 
 heroku run bash
 cd src 
-pyhthon manage.py migrate
+python manage.py migrate
