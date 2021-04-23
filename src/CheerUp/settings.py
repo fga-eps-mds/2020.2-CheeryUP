@@ -29,7 +29,7 @@ SECRET_KEY = '4qbwu$l2$r$_^z01+#$s9l5(y((f)o9ggn2jgxj6a=xgcuup7g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'http://localhost:8000']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '0.0.0.0:8000', 'cheeryup-api.herokuapp.com']
 
 
 # Application definition
