@@ -21,4 +21,4 @@ jobs:
       - name: Create test environment
         run: docker-compose up -d --build
       - name: Run coverage tests
-        run: docker exec web bash -c "coverage run manage.py test && coverage report -m && coverage xml -o cov.xml"
+        run: docker exec 20202-cheeryup_web_1 bash -c "coverage run manage.py test && coverage report -m && coverage xml -o cov.xml"
