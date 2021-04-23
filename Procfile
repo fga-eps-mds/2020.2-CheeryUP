@@ -1,1 +1,1 @@
-web: sh -c 'cd ./src/ && exec CheerUP --log-file -'
+web: gunicorn --pythonpath src CheerUP.wsgi
