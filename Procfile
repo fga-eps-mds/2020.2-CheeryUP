@@ -1,1 +1,1 @@
-web: gunicorn src/CheerUP.wsgi
+web: sh -c 'cd ./src/ && exec CheerUP'
