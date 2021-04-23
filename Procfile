@@ -1,1 +1,1 @@
-web: gunicorn src.CheerUP.wsgi:application --log-file -
+web: gunicorn --pythonpath src CheerUP.wsgi
