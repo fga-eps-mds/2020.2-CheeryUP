@@ -12,9 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-import os
 import django_heroku
-import dj_database_url
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '4qbwu$l2$r$_^z01+#$s9l5(y((f)o9ggn2jgxj6a=xgcuup7g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost:8000', 'cheeryup-api.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'http://localhost:8000']
 
 
 # Application definition
@@ -94,8 +93,6 @@ DATABASES = {
         'HOST': 'db',
         'PORT': 5432
     },
-
-    DATABASES['default'].update(db_from_env)
     # 'sqlite3': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
@@ -154,14 +151,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
-ROOT_URLCONF = 'myproject.urls'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
