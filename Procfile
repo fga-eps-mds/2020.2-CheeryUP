@@ -1,1 +1,1 @@
-web: sh -c 'cd ./src/ && exec CheerUP'
+web: sh -c 'cd ./src/ && exec CheerUP --log-file -'
