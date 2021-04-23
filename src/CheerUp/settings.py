@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 import os
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +29,7 @@ SECRET_KEY = '4qbwu$l2$r$_^z01+#$s9l5(y((f)o9ggn2jgxj6a=xgcuup7g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost:8000', 'cheeryup-backend.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost:8000', 'cheeryup-api.herokuapp.com']
 
 
 # Application definition
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -157,3 +159,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 
 ]
+
+django_heroku.settings(locals())
