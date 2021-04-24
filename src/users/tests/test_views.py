@@ -84,15 +84,13 @@ class PsicologoModelViewSetTestCase(APITestCase):
         response = self.view_list(request)
         self.assertEqual(201, response.status_code)
 
-        user_data = self.data = {
+        self.data = {
             "user": {
                 "username": "afonso",
                 "email": "afonso@solano.com",
                 "password": "123456"
             },
-            "nCRP": "111111111112", 
-            "bio": "Sou o afonso solano",
-            "genero": "M"
+            "nCRP": "111111111112", "bio": "Sou o afonso solano", "genero": "M"
         }
                 
         request = self.factory.post(self.url_list, self.data, format='json')
@@ -107,9 +105,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
                 "email": "afonso@solano.com",
                 "password": "123"   # invalid password
             },
-            "nCRP": "12345678910", 
-            "bio": "Sou o afonso solano",
-            "genero": "M"
+            "nCRP": "12345678910", "bio": "Sou o afonso solano", "genero": "M"
         }
         request = self.factory.post(self.url_list, self.data, format='json')
         # force_authenticate(request, user=self.user) # TODO
