@@ -22,7 +22,7 @@
 |**Número da sprint**|11|
 |**Data de início da sprint**|24/04/2021|
 |**Data de término da sprint**|30/04/2021|
-|**Duração da sprint**|7 dias|
+|**Duração da sprint**|6 dias|
 |**Objetivos planejados + dívida alocada**| 10|  
 
 ## 2 - Objetivos
