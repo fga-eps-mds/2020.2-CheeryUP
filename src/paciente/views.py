@@ -39,4 +39,5 @@ class PacienteModelViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         psicologo = self.get_psicologo()
-        paciente = serializer.save(psicologo=psicologo)
+        # paciente = serializer.save(psicologo=psicologo)
+        serializer.save(psicologo=psicologo)
