@@ -80,17 +80,16 @@ Práticas ágeis realizas nessa sprint.
 - Reunião para planejamento da sprint.  
 - Daily
 - Issues com **time-box** até quart-feira (pode encontrada no planning).
-- User-stories.
 - Velocity tracking.
 - Retrospectiva da sprint.
 - Quadro de conhecimento
 
 
 Práticas XP realizadas nessa sprint.
-- Refatoração.
 - Teste.
 - Padroções de codificação.
 - Jogo de planejamento.
+- Programação em pares.
 
 
 ## 10.Riscos Mapeados para Sprint 
@@ -109,6 +108,6 @@ Práticas XP realizadas nessa sprint.
 
 ## 11.Review do ScrumMaster
 <div style="text-align: justify">
-    Com as mudanças realizadas na sprint anterior o front-end apresentou uma evolução interessante e já é possível enxergar uma luz no fim do túnel. Os responsáveis foram bastantes exigidos na sprint mas também deram conta do recado. A próxima sprint tende a ser mais complica e exigirá produtividade ainda maior dos membros.
+    Com as mudanças realizadas na sprint anterior o front-end apresentou uma evolução interessante e já é possível enxergar uma luz no fim do túnel. Os responsáveis pelo DevOPS da equipe foram bastantes exigidos na sprint mas também deram conta do recado. A próxima sprint tende a ser mais complica e exigirá produtividade ainda maior dos membros.
 </div>
 
