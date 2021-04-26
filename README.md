@@ -6,6 +6,10 @@
         	 <img alt="GitHub closed pull requests " src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.2-CheeryUP?color=%23DE5D5D&logo=GitHub&style=flat-square">
 </a>
 
+ <a href="https://codecov.io/gh/fga-eps-mds/2020.2-CheeryUP">
+      <img src="https://codecov.io/gh/fga-eps-mds/2020.2-CheeryUP/branch/main/graph/badge.svg?style=flat-squaretoken=TC2T6YE48N"/>
+      </a>
+    
 <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/actions/workflows/CD.yml">
 		<img alt="Deploy status" src="https://github.com/fga-eps-mds/2020.2-CheeryUP/actions/workflows/CD.yml/badge.svg?style=flat-square">
 		</a>
