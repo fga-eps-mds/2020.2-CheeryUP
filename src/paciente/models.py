@@ -65,3 +65,13 @@ class Paciente(models.Model):
     def __str__(self):
         return self.nome
         
+class Consulta(models.Model):
+    PROBLEMAS = (
+        ('C', 'Controlada'),
+        ('M', 'Moderada'),
+        ('G', 'Grave'),
+    )
+    registro = models.CharField(max_length=3, unique=True, default=False)
+    nome = models.CharField('NOME', max_length=90)
+    paciente=models.ForeignKey(Paciente, on_delete=models.CASCADE)
+    problemas = models.CharField(default=True, blank=False, max_length=2, choices=PROBLEMAS)
