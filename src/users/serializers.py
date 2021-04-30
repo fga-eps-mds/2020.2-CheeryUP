@@ -4,6 +4,7 @@ from .models import Psicologo
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.validators import UnicodeUsernameValidator
+from rest_framework.authtoken.models import Token
 
 class MyValidator(UnicodeUsernameValidator):
     regex = r'^[\w.@+\- ]+$'
@@ -51,6 +52,7 @@ class PsicologoSerializer(serializers.ModelSerializer):
         user_data = validated_data.pop('user')
         user = User.objects.create_user(**user_data)
         psicologo = Psicologo.objects.create(user=user, **validated_data)
+        Token.objects.create(user=user)
         return psicologo
 
     def validate_nCRP(self, nCRP):
