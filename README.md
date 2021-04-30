@@ -124,7 +124,7 @@ Como o projeto foi desenvolvido em containers é necessário a instalação do D
         <!-- Antônio   -->
         <td align="center"><a href="https://github.com/antoniotoineto"><img style="border-radius: 5%;" src="https://i.ibb.co/wCJ6tks/antonio.jpg" width="100px;" alt=""/><br /><sub><b>Antônio Neto</b><br><b>Front-End</b></sub></a><br /></td>
         <!-- Arthur   -->
-        <td align="center"><a href="https://github.com/art1505"><img style="border-radius: 5%;" src="https://i.ibb.co/xKbQ89h/arthur.jpg" width="100px;" alt=""/><br /><sub><b>Arthur Thalles</b><br><b>Front-End</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/art1505"><img style="border-radius: 5%;" src="https://i.ibb.co/xKbQ89h/arthur.jpg" width="100px;" alt=""/><br /><sub><b>Arthur Talles</b><br><b>Front-End</b></sub></a><br /></td>
         <!-- Davi   -->
         <td align="center"><a href="https://github.com/DaviMatheus"><img style="border-radius: 5%;" src="https://i.ibb.co/4PbbmJs/davi.jpg" width="100px;" alt=""/><br /><sub><b>Davi Matheus</b><br><b>Product Owner</b><br><b>Back-End</b></sub></a><br /></td>
         <!-- Lucas   -->
