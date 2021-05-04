@@ -4,7 +4,17 @@
 		
  <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/pulls?q=is%3Apr+is%3Aclosed">
         	 <img alt="GitHub closed pull requests " src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.2-CheeryUP?color=%23DE5D5D&logo=GitHub&style=flat-square">
-</a>
+
+<a href="https://codeclimate.com/github/fga-eps-mds/2020.2-CheeryUP">
+		<img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability"/>
+		</a>
+ <a href="https://codecov.io/gh/fga-eps-mds/2020.2-CheeryUP">
+      <img src="https://codecov.io/gh/fga-eps-mds/2020.2-CheeryUP/branch/main/graph/badge.svg?style=flat-squaretoken=TC2T6YE48N"/>
+      </a>
+    
+<a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/actions/workflows/CD.yml">
+		<img alt="Deploy status" src="https://github.com/fga-eps-mds/2020.2-CheeryUP/actions/workflows/CD.yml/badge.svg?style=flat-square">
+		</a>
  
  <a href="https://github.com/fga-eps-mds/2020.2-CheeryUP/graphs/commit-activity">
         	 <img alt="GitHub closed issues" src="https://img.shields.io/github/commit-activity/m/fga-eps-mds/2020.2-CheeryUP?color=%2363C1B6&logo=GitHub&style=flat-square">
@@ -114,7 +124,7 @@ Como o projeto foi desenvolvido em containers é necessário a instalação do D
         <!-- Antônio   -->
         <td align="center"><a href="https://github.com/antoniotoineto"><img style="border-radius: 5%;" src="https://i.ibb.co/wCJ6tks/antonio.jpg" width="100px;" alt=""/><br /><sub><b>Antônio Neto</b><br><b>Front-End</b></sub></a><br /></td>
         <!-- Arthur   -->
-        <td align="center"><a href="https://github.com/art1505"><img style="border-radius: 5%;" src="https://i.ibb.co/xKbQ89h/arthur.jpg" width="100px;" alt=""/><br /><sub><b>Arthur Thalles</b><br><b>Front-End</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/art1505"><img style="border-radius: 5%;" src="https://i.ibb.co/xKbQ89h/arthur.jpg" width="100px;" alt=""/><br /><sub><b>Arthur Talles</b><br><b>Front-End</b></sub></a><br /></td>
         <!-- Davi   -->
         <td align="center"><a href="https://github.com/DaviMatheus"><img style="border-radius: 5%;" src="https://i.ibb.co/4PbbmJs/davi.jpg" width="100px;" alt=""/><br /><sub><b>Davi Matheus</b><br><b>Product Owner</b><br><b>Back-End</b></sub></a><br /></td>
         <!-- Lucas   -->
