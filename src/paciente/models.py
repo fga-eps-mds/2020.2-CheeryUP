@@ -28,7 +28,7 @@ class Paciente(models.Model):
         ('NB', 'Núcleo Bandeirante'),
         ('PW', 'Park Way'),
         ('PA', 'Paranoá'),
-        ('Pl', 'Planaltina'),
+        ('PL', 'Planaltina'),
         ('PP', 'Plano Piloto'),
         ('RE', 'Recanto das Emas'),
         ('RF', 'Riacho Fundo'),
@@ -37,10 +37,10 @@ class Paciente(models.Model):
         ('SB', 'São Sabastião'), 
         ('SCIA', 'SCIA'), 
         ('RF', 'Riacho Fundo'),
-        ('RF', 'Riacho Fundo II'), 
+        ('RFII', 'Riacho Fundo II'), 
         ('SI', 'SIA'),
         ('SO', 'Sobradinho'),
-        ('SO', 'Sobradinho II'), 
+        ('SOII', 'Sobradinho II'), 
         ('SN', 'Sol Nascente'), 
         ('SD', 'Sudoeste'),
         ('TA', 'Taguatinga'),
@@ -71,6 +71,7 @@ class Consulta(models.Model):
         (0, 'Sem mudança'),
         (1, 'Melhor que antes')
     )
+  
     id = models.BigAutoField(primary_key=True)
     registro = models.CharField(unique=True, max_length=5, default=False)
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
@@ -92,3 +93,6 @@ class Consulta(models.Model):
     qualidadeNutritiva = models.IntegerField(choices=SITUAÇAO, default=False)
     autoMedicacao = models.IntegerField(choices=SITUAÇAO, default=False)
     intoleranciaFrustração = models.IntegerField(choices=SITUAÇAO, default=False)
+
+
+
