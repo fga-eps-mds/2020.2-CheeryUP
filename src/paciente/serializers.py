@@ -38,4 +38,3 @@ class ConsultaSerializer(serializers.ModelSerializer):
             'autoMedicacao',
             'intoleranciaFrustração',
             ]
-

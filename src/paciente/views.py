@@ -5,7 +5,6 @@ from .serializers import PacienteSerializer
 from .models import Consulta
 from .serializers import ConsultaSerializer
 
-
 # class PacienteViewSet(GenericViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin):
 
 #     queryset = Paciente.objects.all()
@@ -63,8 +62,5 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):   
         paciente = self.get_paciente()
         # paciente = serializer.save(psicologo=psicologo)
-        serializer.save( paciente=paciente)
-
-
-  
-
+        serializer.save(paciente=paciente)
+        

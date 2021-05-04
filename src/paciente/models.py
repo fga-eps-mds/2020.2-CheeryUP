@@ -93,6 +93,3 @@ class Consulta(models.Model):
     qualidadeNutritiva = models.IntegerField(choices=SITUAÇAO, default=False)
     autoMedicacao = models.IntegerField(choices=SITUAÇAO, default=False)
     intoleranciaFrustração = models.IntegerField(choices=SITUAÇAO, default=False)
-
-
-

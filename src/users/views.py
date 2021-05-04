@@ -5,7 +5,6 @@ from rest_framework import permissions
 
 # from rest_framework.permissions import AllowAny
 # from rest_framework.decorators import permission_classes
-from rest_framework import permissions
 # from django.core.checks.messages import Error
 # from django.shortcuts import render
 # from django.contrib.auth.models import User
@@ -35,7 +34,6 @@ class PsicologoModelViewSet(viewsets.ModelViewSet):
     queryset = Psicologo.objects.all()
     lookup_field = 'nCRP'
     permission_classes = (permissions.AllowAny,)
-
 
     # @permission_classes([AllowAny])
     # def create(self, request, *args, **kwargs):
