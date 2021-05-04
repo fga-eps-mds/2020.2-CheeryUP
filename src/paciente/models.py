@@ -28,7 +28,7 @@ class Paciente(models.Model):
         ('NB', 'Núcleo Bandeirante'),
         ('PW', 'Park Way'),
         ('PA', 'Paranoá'),
-        ('Pl', 'Planaltina'),
+        ('PL', 'Planaltina'),
         ('PP', 'Plano Piloto'),
         ('RE', 'Recanto das Emas'),
         ('RF', 'Riacho Fundo'),
@@ -37,10 +37,10 @@ class Paciente(models.Model):
         ('SB', 'São Sabastião'), 
         ('SCIA', 'SCIA'), 
         ('RF', 'Riacho Fundo'),
-        ('RF', 'Riacho Fundo II'), 
+        ('RFII', 'Riacho Fundo II'), 
         ('SI', 'SIA'),
         ('SO', 'Sobradinho'),
-        ('SO', 'Sobradinho II'), 
+        ('SOII', 'Sobradinho II'), 
         ('SN', 'Sol Nascente'), 
         ('SD', 'Sudoeste'),
         ('TA', 'Taguatinga'),
@@ -65,3 +65,31 @@ class Paciente(models.Model):
     def __str__(self):
         return self.nome
         
+class Consulta(models.Model):
+    SITUAÇAO = (
+        (-1, 'Pior que antes'),
+        (0, 'Sem mudança'),
+        (1, 'Melhor que antes')
+    )
+  
+    id = models.BigAutoField(primary_key=True)
+    registro = models.CharField(unique=True, max_length=5, default=False)
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
+    problemasPessoais = models.IntegerField(choices=SITUAÇAO, default=True)
+    humor = models.IntegerField(choices=SITUAÇAO, default=False)
+    estabilidadeDeEmoções = models.IntegerField(choices=SITUAÇAO, default=False)
+    interessePelaVida = models.IntegerField(choices=SITUAÇAO, default=False)
+    capacidadeDeSituaçõesDificeis = models.IntegerField(choices=SITUAÇAO, default=False)
+    convivioFamiliar = models.IntegerField(choices=SITUAÇAO, default=False)
+    energiaSono = models.IntegerField(choices=SITUAÇAO, default=False)
+    convivioAmigos = models.IntegerField(choices=SITUAÇAO, default=False)
+    conhecimentoDoenca = models.IntegerField(choices=SITUAÇAO, default=False)
+    criseEspaçoInterior = models.IntegerField(choices=SITUAÇAO, default=False)
+    exposiçãoRisco = models.IntegerField(choices=SITUAÇAO, default=False)
+    qualidadeSono = models.IntegerField(choices=SITUAÇAO, default=False)
+    tentativaSuicidio = models.IntegerField(choices=SITUAÇAO, default=False)
+    qualidadeEscuta = models.IntegerField(choices=SITUAÇAO, default=False)
+    maturidadeEmocional = models.IntegerField(choices=SITUAÇAO, default=False)
+    qualidadeNutritiva = models.IntegerField(choices=SITUAÇAO, default=False)
+    autoMedicacao = models.IntegerField(choices=SITUAÇAO, default=False)
+    intoleranciaFrustração = models.IntegerField(choices=SITUAÇAO, default=False)

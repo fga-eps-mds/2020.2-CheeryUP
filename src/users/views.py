@@ -1,9 +1,10 @@
 from rest_framework import viewsets
 from .models import Psicologo
 from .serializers import PsicologoSerializer
+from rest_framework import permissions
+
 # from rest_framework.permissions import AllowAny
 # from rest_framework.decorators import permission_classes
-from rest_framework import permissions
 # from django.core.checks.messages import Error
 # from django.shortcuts import render
 # from django.contrib.auth.models import User
