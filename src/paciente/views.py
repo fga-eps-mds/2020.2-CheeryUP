@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from users.models import Psicologo
 from .models import Paciente
 from .serializers import PacienteSerializer
@@ -26,6 +26,7 @@ from .serializers import PacienteSerializer
 #     lookup_field = 'cpf'
 
 class PacienteModelViewSet(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
     lookup_field = 'cpf'
