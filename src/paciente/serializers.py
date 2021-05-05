@@ -7,9 +7,9 @@ class PacienteSerializer(serializers.ModelSerializer):
         fields = ['nome', 'cpf', 'data_nascimento', 'genero', 'regiao',
                   'situacao', 'descricao']
 
-    def validate_cpf(self, cpf):
+    def validate_number_cpf(self, cpf):
         if len(cpf) != 11:
-            raise serializers.ValidationError('numero de caracteres invalido')
+            raise serializers.ValidationError('CPF precisa possuir 11 digitos')
 
         return cpf
 

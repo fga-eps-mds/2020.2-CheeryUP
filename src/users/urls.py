@@ -5,7 +5,6 @@ from .views import CustomTokenObtainPairView
 # from rest_framework_nested import routers
 
 from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
     TokenRefreshView,
 )
 
