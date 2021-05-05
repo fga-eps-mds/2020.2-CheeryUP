@@ -71,9 +71,14 @@ class Consulta(models.Model):
         (0, 'Sem mudança'),
         (1, 'Melhor que antes')
     )
-  
+    PRODUTIVIDADE = (
+        (1, 'Produtiva'),
+        (0, 'Produtividade estavel'),
+        (-1, 'Baixo rendimento')
+    )
     id = models.BigAutoField(primary_key=True)
     data = models.DateField(auto_now_add=True)
+    produtividade = models.IntegerField(default=False, choices=PRODUTIVIDADE)
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
     problemasPessoais = models.IntegerField(choices=SITUAÇAO, default=True)
     humor = models.IntegerField(choices=SITUAÇAO, default=False)

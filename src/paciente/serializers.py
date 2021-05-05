@@ -20,6 +20,7 @@ class ConsultaSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'data',
+            'produtividade',
             'problemasPessoais',
             'humor', 
             'estabilidadeDeEmoções',
