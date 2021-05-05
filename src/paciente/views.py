@@ -32,7 +32,7 @@ class PacienteModelViewSet(viewsets.ModelViewSet):
     lookup_field = 'cpf'
 
     def get_psicologo(self):
-        return Psicologo.objects.get(nCRP=self.kwargs['psicologo_nCRP'])
+        return Psicologo.objects.get(user__username=self.kwargs['psicologo_user__username'])
 
     def get_queryset(self):
         psicologo = self.get_psicologo()
@@ -50,7 +50,7 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
     lookup_field = 'registro'
 
     def get_psicologo(self):
-        return Psicologo.objects.get(nCRP=self.kwargs['psicologo_nCRP'])
+        return Psicologo.objects.get(user__username=self.kwargs['psicologo_user__username'])
 
     def get_paciente(self):
         return Paciente.objects.get(cpf=self.kwargs['paciente_cpf'])

@@ -4,11 +4,20 @@ from .models import Psicologo
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.validators import UnicodeUsernameValidator
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class MyValidator(UnicodeUsernameValidator):
     regex = r'^[\w.@+\- ]+$'
 
-
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        # The default result (access/refresh tokens)
+        data = super(CustomTokenObtainPairSerializer, self).validate(attrs)
+        # Custom data you want to include
+        data.update({'user': self.user.username})
+        # and everything else you want to send in the response
+        return data
+ 
 class UserSerializer(serializers.Serializer):
     username_validator = MyValidator()
     username = serializers.CharField(max_length=100)
@@ -40,7 +49,7 @@ class PsicologoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Psicologo
-        fields = ('user', 'nCRP', 'bio', 'genero')
+        fields = ('user', 'nCRP', 'bio', 'genero', 'name')
 
     def create(self, validated_data):
         """

@@ -1,8 +1,9 @@
 from rest_framework import viewsets
 from .models import Psicologo
-from .serializers import PsicologoSerializer
+from .serializers import PsicologoSerializer, CustomTokenObtainPairSerializer
 from rest_framework import permissions
 
+from rest_framework_simplejwt.views import TokenObtainPairView
 # from rest_framework.permissions import AllowAny
 # from rest_framework.decorators import permission_classes
 # from django.core.checks.messages import Error
@@ -32,9 +33,14 @@ from rest_framework import permissions
 class PsicologoModelViewSet(viewsets.ModelViewSet):
     serializer_class = PsicologoSerializer
     queryset = Psicologo.objects.all()
-    lookup_field = 'nCRP'
+    lookup_field = 'user__username'
     permission_classes = (permissions.AllowAny,)
 
     # @permission_classes([AllowAny])
     # def create(self, request, *args, **kwargs):
     #     return super().create(request, *args, **kwargs)
+
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    # Replace the serializer with your custom
+    serializer_class = CustomTokenObtainPairSerializer
