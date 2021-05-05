@@ -47,7 +47,7 @@ class PacienteModelViewSet(viewsets.ModelViewSet):
 class ConsultaModelViewSet(viewsets.ModelViewSet):
     queryset = Consulta.objects.all()
     serializer_class = ConsultaSerializer
-    lookup_field = 'registro'
+    lookup_field = 'id'
 
     def get_psicologo(self):
         return Psicologo.objects.get(user__username=self.kwargs['psicologo_user__username'])

@@ -18,7 +18,7 @@ class ConsultaSerializer(serializers.ModelSerializer):
     class Meta():
         model = Consulta
         fields = [
-            'registro',
+            'id',
             'data',
             'problemasPessoais',
             'humor', 

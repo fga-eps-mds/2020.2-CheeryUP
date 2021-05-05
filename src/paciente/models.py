@@ -73,7 +73,6 @@ class Consulta(models.Model):
     )
   
     id = models.BigAutoField(primary_key=True)
-    registro = models.CharField(unique=True, max_length=5, default=False)
     data = models.DateField(auto_now_add=True)
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
     problemasPessoais = models.IntegerField(choices=SITUAÇAO, default=True)
