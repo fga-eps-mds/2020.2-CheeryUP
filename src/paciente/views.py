@@ -61,7 +61,8 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
         paciente = self.get_paciente()
         return Consulta.objects.filter(paciente=paciente)
 
-    def perform_create(self, serializer):
+    def perform_create(self, serializer):   
         paciente = self.get_paciente()
         # paciente = serializer.save(psicologo=psicologo)
         serializer.save(paciente=paciente)
+

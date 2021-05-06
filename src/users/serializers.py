@@ -5,10 +5,8 @@ from rest_framework.validators import UniqueValidator
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-
 class MyValidator(UnicodeUsernameValidator):
     regex = r'^[\w.@+\- ]+$'
-
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):

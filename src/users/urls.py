@@ -3,8 +3,8 @@
 from django.urls import path
 from .views import BlacklistTokenUpdateView, CustomTokenObtainPairView
 from .views import CustomTokenObtainPairView
+
 from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
     TokenRefreshView,
 )
 
@@ -21,8 +21,9 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
 
+
     path('blacklist/', BlacklistTokenUpdateView.as_view(),
          name='blacklist'),
-    path('api/login/', CustomTokenObtainPairView.as_view(),name='token_obtain_pair'),
+    path('api/login/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
