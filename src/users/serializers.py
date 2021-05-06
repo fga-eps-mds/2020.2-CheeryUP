@@ -1,4 +1,3 @@
-
 from rest_framework import serializers
 from .models import Psicologo
 from django.contrib.auth.models import User
@@ -17,11 +16,12 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         data.update({'user': self.user.username})
         # and everything else you want to send in the response
         return data
- 
+
+
 class UserSerializer(serializers.Serializer):
     username_validator = MyValidator()
     username = serializers.CharField(max_length=100)
-  
+
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
@@ -33,7 +33,7 @@ class UserSerializer(serializers.Serializer):
         required=True,
         min_length=6,
     )
- 
+
     class Meta:
         model = User
         fields = ('username', 'email', 'password')
@@ -41,8 +41,9 @@ class UserSerializer(serializers.Serializer):
     def validate_password(self, password):
         if len(password) < 6:
             raise serializers.ValidationError('Senha fraca!')
-            
+
         return password
+
 
 class PsicologoSerializer(serializers.ModelSerializer):
     user = UserSerializer(required=True)

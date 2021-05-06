@@ -1,6 +1,8 @@
+
 from .models import Paciente
 from rest_framework import serializers
 from .models import Consulta
+
 class PacienteSerializer(serializers.ModelSerializer):
     class Meta():
         model = Paciente
@@ -40,3 +42,4 @@ class ConsultaSerializer(serializers.ModelSerializer):
             'autoMedicacao',
             'intoleranciaFrustração',
             ]
+

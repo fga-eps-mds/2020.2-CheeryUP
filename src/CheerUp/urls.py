@@ -7,6 +7,7 @@ from rest_framework.schemas import get_schema_view
 from users.views import PsicologoModelViewSet
 from paciente.views import PacienteModelViewSet, ConsultaModelViewSet
 from rest_framework.documentation import include_docs_urls
+
 router = routers.DefaultRouter()
 
 router.register(r'psicologos', PsicologoModelViewSet)
@@ -18,6 +19,7 @@ psicologo_router = routers.NestedDefaultRouter(
 )
 
 psicologo_router.register(r'pacientes', PacienteModelViewSet)
+
 
 paciente_router = routers.NestedSimpleRouter(psicologo_router, r'pacientes', lookup='paciente')
 

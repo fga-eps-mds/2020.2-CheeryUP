@@ -1,9 +1,10 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from users.models import Psicologo
 from .models import Paciente
 from .serializers import PacienteSerializer
 from .models import Consulta
 from .serializers import ConsultaSerializer
+
 
 # class PacienteViewSet(GenericViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin):
 
@@ -27,6 +28,7 @@ from .serializers import ConsultaSerializer
 #     lookup_field = 'cpf'
 
 class PacienteModelViewSet(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
     lookup_field = 'cpf'
@@ -63,4 +65,4 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
         paciente = self.get_paciente()
         # paciente = serializer.save(psicologo=psicologo)
         serializer.save(paciente=paciente)
-        
+
