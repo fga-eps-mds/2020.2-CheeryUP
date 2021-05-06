@@ -10,6 +10,7 @@ from .serializers import PsicologoSerializer, CustomTokenObtainPairSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import permissions
 
+
 # from rest_framework.decorators import permission_classes
 # from django.core.checks.messages import Error
 # from django.shortcuts import render
@@ -64,3 +65,4 @@ class BlacklistTokenUpdateView(APIView):
 class CustomTokenObtainPairView(TokenObtainPairView):
     # Replace the serializer with your custom
     serializer_class= CustomTokenObtainPairSerializer
+
