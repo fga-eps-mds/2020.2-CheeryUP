@@ -1,9 +1,10 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from users.models import Psicologo
 from .models import Paciente
 from .serializers import PacienteSerializer
 from .models import Consulta
 from .serializers import ConsultaSerializer
+
 
 # class PacienteViewSet(GenericViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin):
 
@@ -27,12 +28,13 @@ from .serializers import ConsultaSerializer
 #     lookup_field = 'cpf'
 
 class PacienteModelViewSet(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
     lookup_field = 'cpf'
 
     def get_psicologo(self):
-        return Psicologo.objects.get(nCRP=self.kwargs['psicologo_nCRP'])
+        return Psicologo.objects.get(user__username=self.kwargs['psicologo_user__username'])
 
     def get_queryset(self):
         psicologo = self.get_psicologo()
@@ -47,10 +49,10 @@ class PacienteModelViewSet(viewsets.ModelViewSet):
 class ConsultaModelViewSet(viewsets.ModelViewSet):
     queryset = Consulta.objects.all()
     serializer_class = ConsultaSerializer
-    lookup_field = 'registro'
+    lookup_field = 'id'
 
     def get_psicologo(self):
-        return Psicologo.objects.get(nCRP=self.kwargs['psicologo_nCRP'])
+        return Psicologo.objects.get(user__username=self.kwargs['psicologo_user__username'])
 
     def get_paciente(self):
         return Paciente.objects.get(cpf=self.kwargs['paciente_cpf'])
@@ -63,4 +65,3 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
         paciente = self.get_paciente()
         # paciente = serializer.save(psicologo=psicologo)
         serializer.save(paciente=paciente)
-        
