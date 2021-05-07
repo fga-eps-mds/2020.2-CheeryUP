@@ -3,10 +3,8 @@ from django.urls import path, include
 # from paciente.views import PacienteViewSet
 from rest_framework_nested import routers
 from rest_framework.authtoken.views import obtain_auth_token
-from rest_framework.schemas import get_schema_view
 from users.views import PsicologoModelViewSet
 from paciente.views import PacienteModelViewSet, ConsultaModelViewSet
-from rest_framework.documentation import include_docs_urls
 
 router = routers.DefaultRouter()
 
@@ -38,11 +36,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
     path('login/', include('users.urls')),
-    path('docs/', include_docs_urls(title='CheerUP')),
-    path('schema', get_schema_view(
-        title="CheerUP",
-        description="Api da pagina web CheeryUp ",
-        version="1.0.0"
-    ), name='openapi-schema'),
-    # path('api/register/', include('users.urls')),
+        # path('api/register/', include('users.urls')),
 ]
