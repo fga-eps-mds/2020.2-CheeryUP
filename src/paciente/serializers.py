@@ -1,4 +1,3 @@
-
 from .models import Paciente
 from rest_framework import serializers
 from .models import Consulta
@@ -42,4 +41,3 @@ class ConsultaSerializer(serializers.ModelSerializer):
             'autoMedicacao',
             'intoleranciaFrustração',
             ]
-

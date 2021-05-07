@@ -2,8 +2,6 @@
 # from .views import PsicologoModelViewSet
 from django.urls import path
 from .views import BlacklistTokenUpdateView, CustomTokenObtainPairView
-from .views import CustomTokenObtainPairView
-
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )

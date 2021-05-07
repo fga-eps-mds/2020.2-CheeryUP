@@ -65,4 +65,3 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
         paciente = self.get_paciente()
         # paciente = serializer.save(psicologo=psicologo)
         serializer.save(paciente=paciente)
-

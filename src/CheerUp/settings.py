@@ -180,4 +180,3 @@ CORS_ALLOWED_ORIGINS = [
 
 
 django_heroku.settings(locals())
-
