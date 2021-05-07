@@ -19,11 +19,13 @@ psicologo_router = routers.NestedDefaultRouter(
 
 psicologo_router.register(r'pacientes', PacienteModelViewSet)
 
+
 paciente_router = routers.NestedSimpleRouter(
     psicologo_router, r'pacientes', lookup='paciente')
 
 paciente_router.register(
     r'consultas', ConsultaModelViewSet, basename='consultas')
+
 
 # psicologo_router.register(r'consultas', ConsultaModelViewSet)
 

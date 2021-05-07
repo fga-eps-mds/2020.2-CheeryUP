@@ -66,13 +66,13 @@ class Paciente(models.Model):
     def __str__(self):
         return self.nome
 
-
 class Consulta(models.Model):
     SITUAÇAO = (
         (-1, 'Pior que antes'),
         (0, 'Sem mudança'),
         (1, 'Melhor que antes')
     )
+
 
     id = models.BigAutoField(primary_key=True)
     data = models.DateField(auto_now_add=True)
@@ -98,3 +98,4 @@ class Consulta(models.Model):
     autoMedicacao = models.IntegerField(choices=SITUAÇAO, default=False)
     intoleranciaFrustração = models.IntegerField(
         choices=SITUAÇAO, default=False)
+

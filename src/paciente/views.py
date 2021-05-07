@@ -54,6 +54,7 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
     def get_psicologo(self):
         return Psicologo.objects.get(user__username=self.kwargs['psicologo_user__username'])
 
+
     def get_paciente(self):
         return Paciente.objects.get(cpf=self.kwargs['paciente_cpf'])
 
@@ -65,3 +66,4 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
         paciente = self.get_paciente()
         # paciente = serializer.save(psicologo=psicologo)
         serializer.save(paciente=paciente)
+

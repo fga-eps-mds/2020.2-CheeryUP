@@ -2,8 +2,6 @@
 from .models import Paciente
 from rest_framework import serializers
 from .models import Consulta
-
-
 class PacienteSerializer(serializers.ModelSerializer):
     class Meta():
         model = Paciente
@@ -15,7 +13,6 @@ class PacienteSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('numero de caracteres invalido')
 
         return cpf
-
 
 class ConsultaSerializer(serializers.ModelSerializer):
 
@@ -42,4 +39,6 @@ class ConsultaSerializer(serializers.ModelSerializer):
             'qualidadeNutritiva',
             'autoMedicacao',
             'intoleranciaFrustração',
+
         ]
+
