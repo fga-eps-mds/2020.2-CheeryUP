@@ -1,10 +1,10 @@
- *ATA de Reuniões* 📝 *Sprint 10* 
+ *ATA de Reuniões* 📝 *Sprint 12* 
 
 ## Reunião 02 ❗
 
 | Data  | Local | Horário | Duração  | Autor | Semanal/Daily | Participantes |
 | :- | :- | :- | :- | :- | :- | :- |
-| 01/04/21 | Discord |13h | 30h | [Davi](https://github.com/DaviMatheus)| Daily | Todos |
+| 03/04/21 | Discord |13h | 30h | [Davi](https://github.com/DaviMatheus)| Daily | Todos |
 
 ***Pontos planejados***  
 
