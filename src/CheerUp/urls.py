@@ -5,6 +5,9 @@ from rest_framework_nested import routers
 from rest_framework.authtoken.views import obtain_auth_token
 from users.views import PsicologoModelViewSet
 from paciente.views import PacienteModelViewSet, ConsultaModelViewSet
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
 
 router = routers.DefaultRouter()
 
@@ -27,6 +30,18 @@ paciente_router.register(r'consultas', ConsultaModelViewSet, basename='consultas
 
 # router.registry.extend(psicologo_router.registry)
 
+schema_view = get_schema_view(
+   openapi.Info(
+      title="CheeryUp",
+      default_version='v1',
+      description="Documentação do grupo 7 de MDS-CheryUp",
+      terms_of_service="https://fga-eps-mds.github.io/2020.2-CheeryUP/#/./wiki/CONTRIBUTING",
+      license=openapi.License(name="Test License"),
+   ),
+   public=True,
+   permission_classes=(permissions.AllowAny,),
+)
+
 urlpatterns = [
     path('', include(router.urls)),
     path('api/', include(router.urls)),
@@ -36,5 +51,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
     path('login/', include('users.urls')),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
         # path('api/register/', include('users.urls')),
 ]
