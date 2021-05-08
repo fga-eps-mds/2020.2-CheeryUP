@@ -9,13 +9,17 @@
     - [Plano Gerenciamento de Riscos](./wiki/Plano_Gerenciamento_de_Riscos.md)
 
 * Produto
-    - [Como contribuir?](./wiki/CONTRIBUTING.md)
     - [Backlog do Produto](./wiki/Product_Backlog.md)
     - [Canvas](./wiki/Canvas.md)
     - [Identidade Visual](./wiki/style_guide.md)
     - Protipos 
         - [Protótipo de Baixa](./wiki/Protótipos/baixa_fidelidade.md)
         - [Protótipo de Alta](./wiki/Protótipos/alta_fidelidade.md)
+
+* Contribuição
+    - [Como contribuir?](./wiki/CONTRIBUTING.md)
+    - [Codigo de Conduta](./wiki/CODE_OF_CONDUCT.md)
+    - [Políticas de Contribuição](./wiki/Documents/PolíticasdeContribuiçao.md)
 
 * Sprints
     - Sprint 0
@@ -51,6 +55,7 @@
     - Sprint 10
         - [Planning](./sprints/sprint10/planning.md)
         - [Results](./sprints/sprint10/result.md)
+    
 
 
 

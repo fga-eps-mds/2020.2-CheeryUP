@@ -11,11 +11,16 @@
     - [Plano Gerenciamento de Riscos](./wiki/Plano_Gerenciamento_de_Riscos.md)
 
 - Produto 
-    - [Como contribuir?](./wiki/CONTRIBUTING.md)
     - [Backlog do Produto](./wiki/Product_Backlog.md)
     - [Canvas](./wiki/Canvas.md)
     - [Protótipos](./wiki/Protótipos)
     - [Identidade Visual](./wiki/style_guide.md)
+
+- Contribuição
+    - [Como contribuir?](./wiki/CONTRIBUTING.md)
+    - [Codigo de Conduta](./wiki/CODE_OF_CONDUCT.md)
+    - [Políticas de Contribuição](./wiki/Documents/PolíticasdeContribuiçao.md)
+
 
 - Plannings
     - [Sprint 0](./sprints/sprint0/planning.md)
