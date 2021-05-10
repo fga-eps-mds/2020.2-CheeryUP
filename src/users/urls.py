@@ -6,6 +6,8 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+app_name = 'users'
+
 # from rest_framework_nested import routers
 
 
@@ -20,8 +22,7 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
 
 
-    path('blacklist/', BlacklistTokenUpdateView.as_view(),
-         name='blacklist'),
+    path('blacklist/', BlacklistTokenUpdateView.as_view(), name='blacklist'),
     path('api/login/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
