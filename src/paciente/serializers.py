@@ -18,26 +18,5 @@ class ConsultaSerializer(serializers.ModelSerializer):
 
     class Meta():
         model = Consulta
-        fields = [
-            'id',
-            'data',
-            'produtividade',
-            'problemasPessoais',
-            'humor', 
-            'estabilidadeDeEmoções',
-            'interessePelaVida',
-            'capacidadeDeSituaçõesDificeis',
-            'convivioFamiliar',
-            'energiaSono',
-            'convivioAmigos',
-            'conhecimentoDoenca',
-            'criseEspaçoInterior',
-            'exposiçãoRisco',
-            'qualidadeSono',
-            'tentativaSuicidio',
-            'qualidadeEscuta',
-            'maturidadeEmocional',
-            'qualidadeNutritiva',
-            'autoMedicacao',
-            'intoleranciaFrustração',
-            ]
+        fields = '__all__'
+
