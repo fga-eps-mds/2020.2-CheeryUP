@@ -115,3 +115,62 @@ class PsicologoModelViewSetTestCase(APITestCase):
             response.status_code,
             msg='Foi retornado 201 Create para uma requisição com senha inválido'
         )
+        
+
+
+class TOkenModelViewSet(APITestCase):
+
+    def create_authentication_tokens(self, user_credentials):
+        url_token = reverse('users:token_obtain_pair')
+
+        response = self.client.post(
+            url_token,
+            user_credentials,
+            format='json'
+        )
+        self.factory = APIRequestFactory()
+
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to create user tokens credentials'
+        )
+
+        self.credentials = {
+            'HTTP_AUTHORIZATION': 'Bearer ' + response.data['access']
+        }
+
+    def test_create_user(self):
+        self.user_data = {
+            "user": {
+                "username": "lebronjames",
+                "email": "lebron@example.com",
+                "password": "adminadmin123"
+            },
+            "nCRP": "12345678912",
+            "bio": "string",
+            "genero": "M",
+            "name": "lebron"
+        }
+
+        url_user_signup = reverse('psicologo-list')
+
+        response = self.client.post(
+            url_user_signup,
+            self.user_data,
+            format='json'
+        )
+
+        self.assertEqual(
+            response.status_code,
+            201,
+            msg='Failed during user creation'
+        )
+
+        credentials = {
+            "username": "lebronjames",
+            "password": "adminadmin123",
+        }
+
+        self.create_authentication_tokens(credentials)
+
