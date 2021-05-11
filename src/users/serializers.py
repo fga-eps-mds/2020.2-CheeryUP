@@ -38,13 +38,6 @@ class UserSerializer(serializers.Serializer):
         model = User
         fields = ('username', 'email', 'password')
 
-    def validate_password(self, password):
-        if len(password) < 6:
-            raise serializers.ValidationError('Senha fraca!')
-
-        return password
-
-
 class PsicologoSerializer(serializers.ModelSerializer):
     user = UserSerializer(required=True)
 
