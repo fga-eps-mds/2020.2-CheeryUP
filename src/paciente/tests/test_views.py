@@ -1,15 +1,9 @@
 from rest_framework.test import APITestCase
 from django.urls import reverse
-# from datetime import datetime, timedelta
 from rest_framework.test import APIRequestFactory
-# from paciente.views import PacienteModelViewSet
 from paciente.models import Paciente
+from paciente.models import Consulta
 from users.models import Psicologo
-
-# from property.models import Property
-# from users.models import User
-# from harvest.models import Harvest
-
 
 class PacienteModelViewSetTestCase(APITestCase):
 
@@ -60,44 +54,12 @@ class PacienteModelViewSetTestCase(APITestCase):
             msg='Failed during user creation'
         )
 
-        # user_data.pop('username')
-        # user_data.pop('confirm_password')
-
         credentials = {
             "username": "lebronjames",
             "password": "adminadmin123",
         }
 
         self.create_authentication_tokens(credentials)
-
-    # def create_property(self):
-    #     property_data = {
-    #         'type_of_address': 'House',
-    #         'BRZipCode': '73021498',
-    #         'state': 'DF',
-    #         'city': 'Gama',
-    #         'district': 'Leste',
-    #         'address': "Quadra 4",
-    #     }
-
-    #     url_property_creation = reverse(
-    #         'property:property-list',
-    #     )
-
-    #     response = self.client.post(
-    #         path=url_property_creation,
-    #         data=property_data,
-    #         format='json',
-    #         **self.credentials,
-    #     )
-
-    #     self.assertEqual(
-    #         response.status_code,
-    #         201,
-    #         msg='Failed to create property'
-    #     )
-
-    #     self.property = Property.objects.get(pk=1)
 
     def setUp(self):
         self.create_user()
@@ -119,13 +81,13 @@ class PacienteModelViewSetTestCase(APITestCase):
             kwargs={'psicologo_user__username': 'lebronjames'}
         )
 
-        # self.url_detail = reverse(
-        #     'property:harvest:harvest-detail',
-        #     kwargs={
-        #         'property_pk': self.property.pk,
-        #         'pk': '1'
-        #     }
-        # )
+        self.url_detail = reverse(
+            'paciente-detail',
+            kwargs={
+                'psicologo_user__username': 'lebronjames', 
+                'cpf': '11111111111'
+            }
+        )
 
     def tearDown(self):
         Paciente.objects.all().delete()
@@ -139,12 +101,6 @@ class PacienteModelViewSetTestCase(APITestCase):
             format='json',
             **self.credentials,
         )
-
-        # self.assertEqual(
-        #     response.status_code,
-        #     400,
-        #     msg='Failed to create a harvest'
-        # )
 
         self.assertDictContainsSubset(
             self.paciente_data,
@@ -185,10 +141,9 @@ class PacienteModelViewSetTestCase(APITestCase):
 
     def test_sending_invalid_CPF(self):
 
-        # changing zip code to create a unique property
         self.paciente_data = {
             "nome": "anthony davis",
-            "cpf": "123",
+            "cpf": "123", #invalid
             "data_nascimento": "2002-05-10",
             "genero": "M",
             "regiao": "EO",
@@ -215,260 +170,174 @@ class PacienteModelViewSetTestCase(APITestCase):
             msg='Foi salvo no banco de dados um psicologo com cpf inválido'
         )
 
-    # def test_create_harvest_with_inconsistent_qnt_volunteers(self):
+    def test_list_all_paciente(self):
 
-    #     self.harvest_data['min_volunteers'] = 10
-    #     self.harvest_data['max_volunteers'] = 5
+        self.test_create_paciente()
 
-    #     response = self.client.post(
-    #         path=self.url_list,
-    #         data=self.harvest_data,
-    #         format='json',
-    #         **self.credentials,
-    #     )
+        response = self.client.get(
+            path=self.url_list,
+            format='json',
+            **self.credentials,
+        )
 
-    #     self.assertEqual(
-    #         response.status_code,
-    #         400,
-    #     )
+        self.assertEqual(
+            len(response.data),
+            1,
+            msg='More than one harvest was created'
+        )
 
-    # def test_create_harvest_rule(self):
+        response_data = dict(response.data[0])
 
-    #     self.test_create_harvest()
+        self.assertDictContainsSubset(
+            self.paciente_data,
+            response_data,
+        )
 
-    #     rule_url_list = reverse(
-    #         'property:harvest:harvest_rules-list',
-    #         kwargs={
-    #             'property_pk': self.property.pk,
-    #             'harvest_pk': self.harvest.pk
-    #         }
-    #     )
+    def test_patch_update_paciente(self):
 
-    #     response = self.client.post(
-    #         path=rule_url_list,
-    #         data={'description': 'To participate you need to like Vitas'},
-    #         format='json',
-    #         **self.credentials,
-    #     )
+        self.test_create_paciente()
 
-    #     self.assertEqual(
-    #         response.status_code,
-    #         201,
-    #         msg='Failed to create a harvest rule'
-    #     )
+        paciente_update = {
+             "descricao": "Jogou muito ontem", 
+        }
 
-    #     self.assertEqual(
-    #         'To participate you need to like Vitas',
-    #         response.data['description'],
-    #     )
+        response = self.client.patch(
+            path=self.url_detail,
+            data=paciente_update,
+            format='json',
+            **self.credentials,
+        )
 
-    # def test_create_two_identical_harvest_rule(self):
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to patch update the harvest'
+        )
 
-    #     self.test_create_harvest_rule()
+        self.assertEqual(
+            response.data['descricao'],
+            paciente_update['descricao'],
+        )
 
-    #     with self.assertRaises(AssertionError):
-    #         self.test_create_harvest_rule()
+    def test_patch_update_paciente_with_inconsistent_cpf(self):
 
-    # def test_get_harvests_of_the_week(self):
+        self.test_create_paciente()
 
-    #     today = datetime.date(datetime.now())
+        paciente_update = {
+             "cpf": "111", 
+        }
 
-    #     # create harvests in the next 14 days
-    #     for i in range(14):
-    #         date = today + timedelta(days=i)
+        response = self.client.patch(
+            path=self.url_detail,
+            data=paciente_update,
+            format='json',
+            **self.credentials,
+        )
 
-    #         self.harvest_data['date'] = date
+        self.assertEqual(
+            response.status_code,
+            400,
+        )
 
-    #         response = self.client.post(
-    #             path=self.url_list,
-    #             data=self.harvest_data,
-    #             format='json',
-    #             **self.credentials,
-    #         )
+    def test_patch_update_paciente_with_valid_cpf(self):
 
-    #         self.assertEqual(
-    #             response.status_code,
-    #             201,
-    #             msg='Failed to create a harvest'
-    #         )
+        self.test_create_paciente()
 
-    #     weekly_harvests_url = reverse(
-    #         'weekly_harvests',
-    #     )
+        paciente_update = {
+             "cpf": "11111111111", 
+        }
 
-    #     response = self.client.get(
-    #         path=weekly_harvests_url,
-    #         format='json',
-    #         **self.credentials,
-    #     )
+        response = self.client.patch(
+            path=self.url_detail,
+            data=paciente_update,
+            format='json',
+            **self.credentials,
+        )
 
-    #     self.assertEqual(
-    #         len(response.data),
-    #         8,
-    #         msg='Failed return only the next 7 days harvests'
-    #     )
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to patch update paciente'
+        )
 
-    # def test_list_all_harvest(self):
+    def test_put_update_harvest(self):
 
-    #     self.test_create_harvest()
+        self.test_create_paciente()
 
-    #     response = self.client.get(
-    #         path=self.url_list,
-    #         format='json',
-    #         **self.credentials,
-    #     )
+        self.paciente_data['descricao'] = 'oi'
 
-    #     self.assertEqual(
-    #         len(response.data),
-    #         1,
-    #         msg='More than one harvest was created'
-    #     )
+        response = self.client.put(
+            path=self.url_detail,
+            data=self.paciente_data,
+            format='json',
+            **self.credentials,
+        )
 
-    #     response_data = dict(response.data[0])
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to update paciente'
+        )
 
-    #     self.assertDictContainsSubset(
-    #         self.harvest_data,
-    #         response_data,
-    #     )
+        self.assertDictContainsSubset(
+            self.paciente_data,
+            response.data,
+        )
 
-    # def test_patch_update_harvest(self):
+    def test_get_paciente(self):
 
-    #     self.test_create_harvest()
+        self.test_create_paciente()
 
-    #     harvest_update = {
-    #         'status': 'Done',
-    #     }
+        response = self.client.get(
+            path=self.url_detail,
+            format='json',
+            **self.credentials,
+        )
 
-    #     response = self.client.patch(
-    #         path=self.url_detail,
-    #         data=harvest_update,
-    #         format='json',
-    #         **self.credentials,
-    #     )
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to get paciente'
+        )
 
-    #     self.assertEqual(
-    #         response.status_code,
-    #         200,
-    #         msg='Failed to patch update the harvest'
-    #     )
+        self.assertDictContainsSubset(
+            self.paciente_data,
+            response.data,
+        )
 
-    #     self.assertEqual(
-    #         response.data['status'],
-    #         harvest_update['status'],
-    #     )
+    def test_delete_paciente(self):
 
-    # def test_patch_update_harvest_with_inconsistent_qnt_volunteers(self):
+        self.test_create_paciente()
 
-    #     self.test_create_harvest()
+        response = self.client.delete(
+            path=self.url_detail,
+            format='json',
+            **self.credentials,
+        )
 
-    #     harvest_update = {
-    #         'max_volunteers': 1,
-    #     }
+        self.assertEqual(
+            response.status_code,
+            204,
+            msg='Failed to delete paciente'
+        )
 
-    #     response = self.client.patch(
-    #         path=self.url_detail,
-    #         data=harvest_update,
-    #         format='json',
-    #         **self.credentials,
-    #     )
+        paciente = Paciente.objects.all()
+        qnt_paciente = len(paciente)
 
-    #     self.assertEqual(
-    #         response.status_code,
-    #         400,
-    #     )
+        self.assertEqual(
+            qnt_paciente,
+            0,
+            msg='Failed to delete paciente'
+        )
 
-    # def test_patch_update_harvest_with_valid_qnt_volunteers(self):
-
-    #     self.test_create_harvest()
-
-    #     harvest_update = {
-    #         'max_volunteers': 20,
-    #         'min_volunteers': 10,
-    #     }
-
-    #     response = self.client.patch(
-    #         path=self.url_detail,
-    #         data=harvest_update,
-    #         format='json',
-    #         **self.credentials,
-    #     )
-
-    #     self.assertEqual(
-    #         response.status_code,
-    #         200,
-    #         msg='Failed to patch update the harvest'
-    #     )
-
-    # def test_put_update_harvest(self):
-
-    #     self.test_create_harvest()
-
-    #     self.harvest_data['status'] = 'Done'
-
-    #     response = self.client.put(
-    #         path=self.url_detail,
-    #         data=self.harvest_data,
-    #         format='json',
-    #         **self.credentials,
-    #     )
-
-    #     self.assertEqual(
-    #         response.status_code,
-    #         200,
-    #         msg='Failed to update the harvest'
-    #     )
-
-    #     self.assertDictContainsSubset(
-    #         self.harvest_data,
-    #         response.data,
-    #     )
-
-    # def test_get_harvest(self):
-
-    #     self.test_create_harvest()
-
-    #     response = self.client.get(
-    #         path=self.url_detail,
-    #         format='json',
-    #         **self.credentials,
-    #     )
-
-    #     self.assertEqual(
-    #         response.status_code,
-    #         200,
-    #         msg='Failed to get the harvest'
-    #     )
-
-    #     self.assertDictContainsSubset(
-    #         self.harvest_data,
-    #         response.data,
-    #     )
-
-    # def test_delete_harvest(self):
-
-    #     self.test_create_harvest()
-
-    #     response = self.client.delete(
-    #         path=self.url_detail,
-    #         format='json',
-    #         **self.credentials,
-    #     )
-
-    #     self.assertEqual(
-    #         response.status_code,
-    #         204,
-    #         msg='Failed to delete the harvest'
-    #     )
-
-    #     harvests = Harvest.objects.all()
-    #     qnt_harvest = len(harvests)
-
-    #     self.assertEqual(
-    #         qnt_harvest,
-    #         0,
-    #         msg='Failed to delete the harvest'
-    #     )
-
+    
+#         self.harvest_data = {
+#             'date': '2019-11-21',
+#             'description': 'Apple Harvest',
+#             'status': 'Open',
+#             'max_volunteers': 10,
+#             'min_volunteers': 5,
+#         }
 
 # class MonthlyHarvestsTestCase(APITestCase):
 
