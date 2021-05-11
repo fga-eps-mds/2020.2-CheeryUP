@@ -6,6 +6,8 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+app_name = 'users'
+
 # from rest_framework_nested import routers
 
 
