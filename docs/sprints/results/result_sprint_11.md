@@ -1,4 +1,4 @@
-## Resultado da Sprint 9
+## Resultado da Sprint 11
 
 ## Sumário
 
@@ -28,19 +28,19 @@
 ## 2.Backlog Sprints
 
 |ID | Descrição | Responsável| Status |
-|ID | Descrição | Responsável| Pontuação |
 |---|--------------------|--------------|------------- |
-|[#75](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/75) | US03 - Login de Usuário | Todos os integrantes | 15 | 
-|[#78](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/78) | US06 - Cadastrar Pacientes | Todos os integrantes | 10 | 
-|[#122](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/122) | Pipeline-CD |  [juninhigh](https://github.com/juninhigh) | 5 |
-|[#123](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/123) | Implementação Codecov |  [juninhigh](https://github.com/juninhigh) & [DaviMatheus](https://github.com/DaviMatheus)  | 5 |
-|[#124](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/124) | Testes unitarios e integração front |  [juninhigh](https://github.com/juninhigh)  | 13 |
-|[#126](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/126) | Docs Sprint 11 e ATA | [DaviMatheus](https://github.com/DaviMatheus), [juninhigh](https://github.com/juninhigh) & [art1505](https://github.com/art1505) | 3 |
-|[#127](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/127) | Estudos linkagem front e back | [mibasFerraz](https://github.com/mibasFerraz), [juninhigh](https://github.com/juninhigh), [antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [art1505](https://github.com/art1505) | 6 | 
-|[#128](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/128) | Criação das paginas restantes do front | [mibasFerraz](https://github.com/mibasFerraz), [juninhigh](https://github.com/juninhigh), [antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [art1505](https://github.com/art1505) | 7 | 
-|[#129](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/129) | Cadastro da Consulta do paciente | [DaviMatheus](https://github.com/DaviMatheus), [antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [Abraao1231](https://github.com/Abraao1231) | 10 | 
-|[#130](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/130) | Começo da Implementação dos gráficos no projeto | [DaviMatheus](https://github.com/DaviMatheus) & [Abraao1231](https://github.com/Abraao1231) | 8 | 
-|[#132](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/132) | Reunião com psicóloga | [mibasFerraz](https://github.com/mibasFerraz) & [juninhigh](https://github.com/juninhigh) | 5 | 
+|[#75](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/75)| US03 - Login de Usuário | Todos os integrantes| Concluida | 
+|[#78](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/78) | US06 - Cadastrar Pacientes | Todos os integrantes | Concluida | 
+|[#122](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/122) | Pipeline-CD |  [juninhigh](https://github.com/juninhigh) | Concluida |
+|[#123](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/123) | Implementação Codecov |  [juninhigh](https://github.com/juninhigh) & [DaviMatheus](https://github.com/DaviMatheus)  | Concluida |
+|[#124](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/124) | Testes unitarios e integração front |  [juninhigh](https://github.com/juninhigh)  | Adiada |
+|[#126](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/126) | Docs Sprint 11 e ATA | [DaviMatheus](https://github.com/DaviMatheus), [juninhigh](https://github.com/juninhigh) & [art1505](https://github.com/art1505) | Concluida |
+|[#127](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/127) | Estudos linkagem front e back | [mibasFerraz](https://github.com/mibasFerraz), [juninhigh](https://github.com/juninhigh), [antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [art1505](https://github.com/art1505) | Concluida | 
+|[#128](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/128) | Criação das paginas restantes do front | [mibasFerraz](https://github.com/mibasFerraz), [juninhigh](https://github.com/juninhigh), [antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [art1505](https://github.com/art1505) | Concluida | 
+|[#129](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/129) | Cadastro da Consulta do paciente | [DaviMatheus](https://github.com/DaviMatheus), [antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [Abraao1231](https://github.com/Abraao1231) | Concluida | 
+|[#130](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/130) | Começo da Implementação dos gráficos no projeto | [DaviMatheus](https://github.com/DaviMatheus) & [Abraao1231](https://github.com/Abraao1231) | Concluida | 
+|[#132](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/132) | Reunião com psicóloga | [mibasFerraz](https://github.com/mibasFerraz) & [juninhigh](https://github.com/juninhigh) | Concluida | 
+ 
  
 
 
