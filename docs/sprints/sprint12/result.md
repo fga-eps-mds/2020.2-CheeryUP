@@ -28,25 +28,22 @@
 ## 2.Backlog Sprints
 
 |ID | Descrição | Responsável| Status |
-|ID | Descrição | Responsável| Pontuação |
-|---|--------------------|--------------|------------- |
-|ID | Descrição | Responsável| Pontuação |
-|---|--------------------|--------------|------------- |
-|[#75](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/75) | US03 - Login de Usuário | Todos os integrantes | 15 | 
-|[#76](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/77) | US04 - Sair da Conta | Todos os integrantes | 8 | 
-|[#78](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/78) | US06 - Cadastrar Pacientes | Todos os integrantes | 10 |
-|[#79](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/79) | US07 - Deletar Pacientes | Todos os integrantes | 10 |
-|[#135](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/135) | US08 - Atualizar Conta | Todos os integrantes | 10 |
-|[#137](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/137) | US10 - Atualizar dados do paciente | Todos os integrantes | 10 |
-|[#138](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/138) | US11 - Listar pacientes | Todos os integrantes | 10 |
-|[#139](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/139) | US12 - Inserir consulta a um pacientes | Todos os integrantes | 10 |
-|[#141](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/141) | US13 - Implementação dos gráficos em relação ao paciente | Todos os integrantes | 10 |
-|[#142](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/142) | US14 - Visualização dos gráficos | Todos os integrantes | 10 |
-|[#143](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/143) | Inicio de implementação de gráficos para o paciente |[DaviMatheus](https://github.com/DaviMatheus) & [Abraao1231](https://github.com/Abraao1231) | 8 |
-|[#144](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/144) | US15 - Implementação dos dashboards | Todos os integrantes | 10 |
-|[#145](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/145) | Docs Sprint 12 e ATA | [DaviMatheus](https://github.com/DaviMatheus), [juninhigh](https://github.com/juninhigh) & [art1505](https://github.com/art1505) | 3 |
-|[#146](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/146) | US16 - Visualização dos dashboards | Todos os integrantes | 10 |
-|[#147](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/147) | Responsividade e melhorias em geral do front | [mibasFerraz](https://github.com/mibasFerraz) | 6 | 
+|--------------|----------------|--------------|-----------|
+|[#75](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/75) | US03 - Login de Usuário | Todos os integrantes | Concluida | 
+|[#76](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/77) | US04 - Sair da Conta | Todos os integrantes | Concluida | 
+|[#78](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/78) | US06 - Cadastrar Pacientes | Todos os integrantes | Concluida |
+|[#79](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/79) | US07 - Deletar Pacientes | Todos os integrantes | Em andamento |
+|[#135](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/135) | US08 - Atualizar Conta | Todos os integrantes | Em andamento  |
+|[#137](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/137) | US10 - Atualizar dados do paciente | Todos os integrantes | Em andamento  |
+|[#138](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/138) | US11 - Listar pacientes | Todos os integrantes | Concluida |
+|[#139](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/139) | US12 - Inserir consulta a um pacientes | Todos os integrantes | Em andamento |
+|[#141](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/141) | US13 - Implementação dos gráficos em relação ao paciente | Todos os integrantes | Concluida |
+|[#142](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/142) | US14 - Visualização dos gráficos | Todos os integrantes | Em andamento  |
+|[#143](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/143) | Inicio de implementação de gráficos para o paciente |[DaviMatheus](https://github.com/DaviMatheus) & [Abraao1231](https://github.com/Abraao1231) | Concluida |
+|[#144](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/144) | US15 - Implementação dos dashboards | Todos os integrantes | Concluida |
+|[#145](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/145) | Docs Sprint 12 e ATA | [DaviMatheus](https://github.com/DaviMatheus), [juninhigh](https://github.com/juninhigh) & [art1505](https://github.com/art1505) | Concluida |
+|[#146](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/146) | US16 - Visualização dos dashboards | Todos os integrantes | Em andamento  |
+|[#147](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/147) | Responsividade e melhorias em geral do front | [mibasFerraz](https://github.com/mibasFerraz) | Concluida | 
  
 
 
