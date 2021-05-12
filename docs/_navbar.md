@@ -34,7 +34,9 @@
     - [Sprint 8](./sprints/sprint8/planning.md)
     - [Sprint 9](./sprints/sprint9/planning.md)
     - [Sprint 10](./sprints/sprint10/planning.md)
-
+    - [Sprint 11](./sprints/sprint11/planning.md)
+    - [Sprint 12](./sprints/sprint12/planning.md)
+    - [Sprint 13](./sprints/sprint13/planning.md)
 - Results
     - [Sprint 0](./sprints/sprint0/result.md)
     - [Sprint 1](./sprints/sprint1/result.md)
@@ -47,3 +49,6 @@
     - [Sprint 8](./sprints/sprint8/result.md)
     - [Sprint 9](./sprints/sprint9/result.md)
     - [Sprint 10](./sprints/sprint10/result.md)
+    - [Sprint 11](./sprints/sprint11/result.md)
+    - [Sprint 12](./sprints/sprint12/result.md)
+    - [Sprint 13](./sprints/sprint13/result.md)

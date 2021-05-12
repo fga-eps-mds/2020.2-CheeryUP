@@ -55,7 +55,15 @@
     - Sprint 10
         - [Planning](./sprints/sprint10/planning.md)
         - [Results](./sprints/sprint10/result.md)
-    
+    - Sprint 11
+        - [Planning](./sprints/sprint11/planning.md)
+        - [Results](./sprints/sprint11/result.md)
+    - Sprint 12
+        - [Planning](./sprints/sprint12/planning.md)
+        - [Results](./sprints/sprint12/result.md)
+    - Sprint 13
+        - [Planning](./sprints/sprint13/planning.md)
+        - [Results](./sprints/sprint13/result.md)
 
 
 
