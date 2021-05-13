@@ -231,8 +231,7 @@ class TOkenModelViewSet(APITestCase):
 
     def create_authentication_tokens(self, user_credentials):
         url_token = reverse('users:token_obtain_pair')
-        refresh_url = reverse('users:token_refresh')
-
+        
         response = self.client.post(
             url_token,
             user_credentials,

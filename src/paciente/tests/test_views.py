@@ -2,7 +2,6 @@ from rest_framework.test import APITestCase
 from django.urls import reverse
 from rest_framework.test import APIRequestFactory
 from paciente.models import Paciente
-from paciente.models import Consulta
 from users.models import Psicologo
 
 class PacienteModelViewSetTestCase(APITestCase):
@@ -76,7 +75,6 @@ class PacienteModelViewSetTestCase(APITestCase):
             "descricao": "Jogou muito ontem"
         }
 
-
         self.url_list = reverse(
             'paciente-list',
             kwargs={'psicologo_user__username': 'lebronjames'}
@@ -144,7 +142,7 @@ class PacienteModelViewSetTestCase(APITestCase):
 
         self.paciente_data = {
             "nome": "anthony davis",
-            "cpf": "123", #invalid
+            "cpf": "123",  
             "data_nascimento": "2002-05-10",
             "genero": "M",
             "regiao": "EO",
@@ -368,7 +366,7 @@ class PacienteModelViewSetTestCase(APITestCase):
             "intoleranciaFrustração": -1
         }
 
-        response = self.client.post(
+        self.client.post(
             path=self.url_list,
             data=self.consulta_data,
             format='json',
