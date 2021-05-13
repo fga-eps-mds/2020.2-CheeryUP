@@ -1,9 +1,9 @@
 name: CD
 
 on:
-  create:
-    tags:
-      - '*'
+  push:
+    branches:
+      - develop
 
 jobs:
   build:
