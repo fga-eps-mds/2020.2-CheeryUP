@@ -4,7 +4,7 @@
 
 | Data  | Local | Horário | Duração  | Autor | Semanal/Daily | Participantes |
 | :- | :- | :- | :- | :- | :- | :- |
-| 03/04/21 | Discord |13h | 30h | [Davi](https://github.com/DaviMatheus)| Daily | Todos |
+| 10/05/21 | Discord |13h | 30h | [Davi](https://github.com/DaviMatheus)| Daily | Todos |
 
 ***Pontos planejados***  
 
@@ -13,8 +13,6 @@
 2. Deletar e atualizar dados.
 
 3. Melhoria dos codigos
-
-
 
 ***Assuntos pendentes***
 - Não se aplica
