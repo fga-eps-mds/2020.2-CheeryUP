@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Psicologo
-from django.contrib.auth.models import User, update_last_login
+from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
@@ -21,7 +21,7 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 class UserSerializer(serializers.Serializer):    
     username = serializers.CharField(
         required=True,
-        validators=[UniqueValidator(queryset=User.objects.all()),MyValidator()],
+        validators=[UniqueValidator(queryset=User.objects.all()), MyValidator()], 
         # unique=True,
         label="Username Address",
 
@@ -75,9 +75,7 @@ class PsicologoSerializer(serializers.ModelSerializer):
             instance.genero = validated_data.get('genero', instance.genero)   
         if 'name' in validated_data:
             instance.name = validated_data.get('name', instance.name)          
-
-
-
+            
         instance.user.save()
 
         return super().update(instance, validated_data)

@@ -256,7 +256,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
 
         self.test_create_psicologo()
 
-        data =  {
+        data = {
              "genero": "F", 
         }
 
@@ -276,7 +276,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
 
         self.test_create_psicologo()
 
-        data =  {
+        data = {
              "nome": "Marcela", 
         }
 
