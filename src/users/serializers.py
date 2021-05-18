@@ -18,10 +18,14 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         return data
 
 
-class UserSerializer(serializers.Serializer):
-    username_validator = MyValidator()
-    username = serializers.CharField(max_length=100)
+class UserSerializer(serializers.Serializer):    
+    username = serializers.CharField(
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all()), MyValidator()], 
+        # unique=True,
+        label="Username Address",
 
+    )
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
@@ -39,7 +43,7 @@ class UserSerializer(serializers.Serializer):
         fields = ('username', 'email', 'password')
 
 class PsicologoSerializer(serializers.ModelSerializer):
-    user = UserSerializer(required=True)
+    user = UserSerializer(required=False)
 
     class Meta:
         model = Psicologo
@@ -55,6 +59,26 @@ class PsicologoSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**user_data)
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
+
+    def update(self, instance, validated_data):
+        if 'user' in validated_data:
+            user = validated_data.pop('user')
+            if 'username' in user:
+                instance.user.username = user.get('username', instance.user.username)
+            if 'email' in user:
+                instance.user.email = user.get('email', instance.user.email)
+        if 'nCRP' in validated_data:
+            instance.nCRP = validated_data.get('nCRP', instance.nCRP)   
+        if 'bio' in validated_data:
+            instance.bio = validated_data.get('bio', instance.bio)   
+        if 'genero' in validated_data:
+            instance.genero = validated_data.get('genero', instance.genero)   
+        if 'name' in validated_data:
+            instance.name = validated_data.get('name', instance.name)          
+            
+        instance.user.save()
+
+        return super().update(instance, validated_data)
 
     def validate_nCRP(self, nCRP):
         if len(nCRP) != 11:
