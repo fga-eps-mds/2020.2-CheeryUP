@@ -65,9 +65,21 @@ class PsicologoSerializer(serializers.ModelSerializer):
             user = validated_data.pop('user')
             if 'username' in user:
                 instance.user.username = user.get('username', instance.user.username)
-            instance.user.save()
             if 'email' in user:
-                instance.user.email = user.get('username', instance.user.email)
+                instance.user.email = user.get('email', instance.user.email)
+        if 'nCRP' in validated_data:
+            instance.nCRP = validated_data.get('nCRP', instance.nCRP)   
+        if 'bio' in validated_data:
+            instance.bio = validated_data.get('bio', instance.bio)   
+        if 'genero' in validated_data:
+            instance.genero = validated_data.get('genero', instance.genero)   
+        if 'name' in validated_data:
+            instance.name = validated_data.get('name', instance.name)          
+
+
+
+        instance.user.save()
+
         return super().update(instance, validated_data)
 
     def validate_nCRP(self, nCRP):
