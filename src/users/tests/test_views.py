@@ -208,6 +208,28 @@ class PsicologoModelViewSetTestCase(APITestCase):
             msg='Failed to update psicologo'
         )
 
+    def test_put_username_update_psicologo(self):
+
+        self.test_create_psicologo()
+
+        data = {
+            "user": {
+                "username": "sebastiao"
+            }
+        }
+
+        response = self.client.patch(
+            path=self.url_detail,
+            data=data,
+            format='json',
+        )
+
+        self.assertEqual(
+            response.status_code,
+            200,
+            msg='Failed to update psicologo'
+        )
+
     def test_sending_invalid_password(self):
         # changing zip code to create a unique property
         self.data = {

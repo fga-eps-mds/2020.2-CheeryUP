@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Psicologo
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, update_last_login
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
@@ -18,10 +18,14 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         return data
 
 
-class UserSerializer(serializers.Serializer):
-    username_validator = MyValidator()
-    username = serializers.CharField(max_length=100)
+class UserSerializer(serializers.Serializer):    
+    username = serializers.CharField(
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all()),MyValidator()],
+        # unique=True,
+        label="Username Address",
 
+    )
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
@@ -39,7 +43,7 @@ class UserSerializer(serializers.Serializer):
         fields = ('username', 'email', 'password')
 
 class PsicologoSerializer(serializers.ModelSerializer):
-    user = UserSerializer(required=True)
+    user = UserSerializer(required=False)
 
     class Meta:
         model = Psicologo
@@ -55,6 +59,16 @@ class PsicologoSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**user_data)
         psicologo = Psicologo.objects.create(user=user, **validated_data)
         return psicologo
+
+    def update(self, instance, validated_data):
+        if 'user' in validated_data:
+            user = validated_data.pop('user')
+            if 'username' in user:
+                instance.user.username = user.get('username', instance.user.username)
+            instance.user.save()
+            if 'email' in user:
+                instance.user.email = user.get('username', instance.user.email)
+        return super().update(instance, validated_data)
 
     def validate_nCRP(self, nCRP):
         if len(nCRP) != 11:
