@@ -46,18 +46,7 @@ class PsicologoModelViewSet(viewsets.ModelViewSet):
     # def create(self, request, *args, **kwargs):
     #     return super().create(request, *args, **kwargs)
 
-class BlacklistTokenUpdateView(APIView):
-    permission_classes = (permissions.AllowAny,)
-    authentication_classes = ()
 
-    def post(self, request):
-        try:
-            refresh_token = request.data["refresh_token"]
-            token = RefreshToken(refresh_token)
-            token.blacklist()
-            return Response(status=status.HTTP_205_RESET_CONTENT)
-        except Exception:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
 class CustomTokenObtainPairView(TokenObtainPairView):
     # Replace the serializer with your custom
     serializer_class = CustomTokenObtainPairSerializer
