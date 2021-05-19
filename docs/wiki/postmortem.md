@@ -104,8 +104,6 @@ Como integrante da equipe, me sinto grato pela oportunidade do trabalho em equip
 
 Portanto, a matéria têm sido muito gratificante, pois é nítido que todo o trabalho duro realizado no semestre foi sendo projetado em novas e essenciais habilidades, pensamentos e conhecimentos como um aluno de Engenharia de Sofware
 
-
-
 ### Nilvan
 
 
@@ -121,10 +119,21 @@ Portanto, a matéria têm sido muito gratificante, pois é nítido que todo o tr
 
 ### Natanael
 
+No começo do projeto nosso grupo estava muito perdido com relação às tecnologias, pois a maior parte apenas tinha conhecimento de tecnologias vistas na faculdade, C e Java, e que no momento em que precisamos utilizar tecnologias mais atuais do mercado de trabalho, acredito que isso assustou a todos do grupo, contudo, acredito que conseguimos um resultado satisfatório para o projeto.
 
+Em relação ao esforço equipe, acredito que todos mostraram um esforço considerável, ressalvas ao Nilvan e ao Davi, e acredito que eu tive um baixo desempenho em alguns momentos do projeto. Sobretudo, por ser o meu primeiro contato com o uso de 'frameworks' e a minha falta de conhecimento sobre python e javascript, além de que inicialmente eu estava na equipe do back-end e tive que migrar para o front-end, gerou um certo desanimo em mim, com isso, a minha comunicação e contribuição com o projeto decaíram bastante. Outro fator, parte da equipe já se conhecia anterior mente o que ajudou na comunicação
 
+Assim sendo, MDS para mim, foi uma visão do mercado de trabalho, e me mostrou que eu estou apenas no início da minha carreira e que ainda tenho muito o que aprender muito sobre a Engenharia de Software para ser um bom profissional. Além disso, identifiquei graves problemas de comunicação que eu tenho e que preciso para o meu desenvolvimento pessoal, não apenas no ambio de trabalho, mas também relações interpessoais.
+
+Definindo os meus sentimentos sobre o trabalho em poucas palavras seria um projeto onde toda a equipe é formada por estagiários, onde todos querem aprender, mas acabam só fazendo bobeira no código.
 ### Lucas
 
+Antes de conhecer a disciplina, já sabia que não seria fácil. O que eu não sabia era que ia ser tão desgastante assim.
+Comecei no grupo 3 e tivemos um desempenho tão insatisfatório que a melhor opção foi desfazer o grupo e realocar os membros para outros grupos. Nessa jogada eu vim parar no grupo 7. Cheguei aqui completamente perdido com a matéria e com o que o grupo estava desenvolvendo. Tive menos tempo que os demais para poder estudar as tecnologias utilizadas no projeto e isso acabou tornando a matéria mais corrida ainda. Por conhecer um pouco de python, acabei entrando no back-end para aprender Django e ajudar no projeto. Fiz algumas funcionalidades, mas como o Abraão e Davi mandam pra caramba e o front-end tava precisando de ajuda, troquei de time sem saber quase nada sobre javascript, hmtl e css. Aí tive menos tempo ainda pra aprender essas tecnologias e ajudar a galera no front. Como tinham mais coisas pra fazer aqui, acabei sendo mais produtivo no front que no back.
+
+Quanto às equipes, definitivamente não tive uma relação boa com o primeiro grupo. Porém, com o grupo 7 foi totalmente diferente. Entrei sem conhecer ninguém e eles foram muito receptivos e tranquilos comigo. O grupo se comunica muito bem (as vezes bem até demais com reuniões no sábado ou domingo kkkkk), soubemos absorver as ausências no decorrer do semestre e sempre houve o respeito e solidariedade. O sentimento do cansaço agora no fim é grande e já estou sem muita paciência pra terminar as pendências, mas quando eu olho o resultado final e vejo como que ta ficando legal dá um ânimo. Valeu, galera!
+
+Em suma, aprendi muito mais do que eu esperava com essa matéria. Desde a relação com meus colegas de grupo até as diversas linguagens que nunca tinha visto antes. O crescimento foi notório e isso vai dar pra ver naquela pesquisa do que eu sabia e o que sei agora. Em especial gostaria de agradecer o Abraão, Davi, Antônio e Junin por terem me ajudado pelo menos alguma vez no decorrer da matéria de MDS e também para a professora Carla e a monitora Giulia por terem me ajudado no início do semestre.
 
 ### Arthur
 
