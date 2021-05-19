@@ -1,5 +1,7 @@
 * [Home](README.md)
 
+* [Post Mortem](./wiki/Documents/postmortem.md)
+
 * Documentação
     - [Documento de arquitetura](./wiki/Documents/Documento_de_Arquitetura.md)
     - [Documento de visão](./wiki/Documents/Documento_de_Visao.md)

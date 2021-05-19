@@ -9,6 +9,7 @@
     - [Estrutura Analítica do Projeto](./wiki/EAP.md)
     - [Termo de Abertura](./wiki/TAP.md)
     - [Plano Gerenciamento de Riscos](./wiki/Plano_Gerenciamento_de_Riscos.md)
+    - [Post Mortem](./wiki/Documents/postmortem.md)
 
 - Produto 
     - [Backlog do Produto](./wiki/Product_Backlog.md)
