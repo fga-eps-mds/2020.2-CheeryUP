@@ -1,11 +1,7 @@
 from rest_framework import viewsets
 from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework import status
-from rest_framework.views import APIView
-from rest_framework.response import Response
 from .models import Psicologo
 from .serializers import PsicologoSerializer, CustomTokenObtainPairSerializer
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import permissions
 class PsicologoModelViewSet(viewsets.ModelViewSet):
     serializer_class = PsicologoSerializer
