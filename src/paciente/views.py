@@ -4,29 +4,6 @@ from .models import Paciente
 from .serializers import PacienteSerializer
 from .models import Consulta
 from .serializers import ConsultaSerializer
-
-
-# class PacienteViewSet(GenericViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin):
-
-#     queryset = Paciente.objects.all()
-#     serializer_class = PacienteSerializer
-
-# class PacienteRegistrationAPIView(GenericViewSet, mixins.CreateModelMixin):
-#     serializer_class = PacienteSerializer
-#     queryset = Paciente.objects.all()
-
-# class PacienteDelete(GenericViewSet, mixins.DestroyModelMixin):
-
-#     serializer_class = PacienteSerializer
-#     queryset = Paciente.objects.all()
-#     lookup_field = 'cpf'
-
-# class PacienteUpdate(GenericViewSet, mixins.UpdateModelMixin):
-
-#     serializer_class = PacienteSerializer
-#     queryset = Paciente.objects.all()
-#     lookup_field = 'cpf'
-
 class PacienteModelViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Paciente.objects.all()
@@ -42,7 +19,6 @@ class PacienteModelViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         psicologo = self.get_psicologo()
-        # paciente = serializer.save(psicologo=psicologo)
         serializer.save(psicologo=psicologo)
 
 
@@ -63,5 +39,4 @@ class ConsultaModelViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):   
         paciente = self.get_paciente()
-        # paciente = serializer.save(psicologo=psicologo)
         serializer.save(paciente=paciente)

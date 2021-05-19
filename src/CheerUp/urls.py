@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path, include
-# from paciente.views import PacienteViewSet
 from rest_framework_nested import routers
 from rest_framework.authtoken.views import obtain_auth_token
 from users.views import PsicologoModelViewSet
@@ -26,10 +25,6 @@ paciente_router = routers.NestedSimpleRouter(psicologo_router, r'pacientes', loo
 
 paciente_router.register(r'consultas', ConsultaModelViewSet, basename='consultas')
 
-# psicologo_router.register(r'consultas', ConsultaModelViewSet)
-
-# router.registry.extend(psicologo_router.registry)
-
 schema_view = get_schema_view(
    openapi.Info(
       title="CheeryUp",
@@ -53,5 +48,5 @@ urlpatterns = [
     path('login/', include('users.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-        # path('api/register/', include('users.urls')),
+    
 ]
