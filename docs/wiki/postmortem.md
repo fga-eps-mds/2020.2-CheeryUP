@@ -84,8 +84,6 @@ Assim, alguns erros e pontos que precisam ser aprimorados expostos no feedback:
 
 
 # Sentimentos da Equipe
-
-
 ### Abraao 
 
 No inicio da disciplina eu e o grupo estávamos meio perdidos em relação ao que tinha que ser feito,já que nenhum de nós não tínhamos experiencia em projetos mais profissionais e muito menos sobre as tecnologias que iriamos ultilizar em nosso projeto , porém, apesar de tudo isso
@@ -95,6 +93,19 @@ Mas a partir da release 2 tanto eu como o Davi perdemos muito contato com a gale
 que acabou deixando agente bastante preocupado em relação a conclusão do projeto. Acho que uma questão muito interessante do projeto foi manter um contato constante com o nosso cliente para saber o que deveria ser feito e realizar essa comunicação foi um tanto confusa já que não sabemos nada sobre psicologia e os psicólogos que tivemos contato não sabiam muito sobre como falar no que eles estavam pensando tanto que uma delas disse que agente tava lá tentando fazer mais com que agente entendesse o que o outro dizia do que realmente fazer e implementar o projeto. Mas no final das contas agente conseguiu entender o que se passava na mente de cada um.
 
 E apesar de todas essas dificuldade fiquei contente com o resultado na disciplina e hoje com tantas ferramentas e tecnologias estudadas, metodologias usadas, trabalho em grupo e com uma comunicação direta com um possível cliente, entendo sua importância em um curso como esse.
+
+### Antonio
+
+Eu diria que MDS foi a matéria que me introduziu de vez no mundo da Engenharia de Software. Desde do começo do curso eu me deparava com diversas matérias que impulsionam o desenvolvimento de habilidades que um engenheiro de Software deve dominar, uma matéria nos ensinava a lógica de programação, a outra matéria era responsável pela lógica matemática por trás disso, e assim vai... mas eu sempre treinava habilidades distintas, que um dia se combinariam. Foi aí que me deparei com MDS, a matéria que juntou tudo isso e muito mais.
+
+MDS me ensinou desde uma boa comunicação em equipe até boas horas na frente do computador pesquisando sobre uma ferramenta ou alguma tecnologia específica. MDS contempla tudo de uma vez, desenvolvendo de forma ampla do estilo de trabalho que vamos encontrar no mercado de trabalho. MDS é uma matéria bastante trabalhosa, mas que todo os conhecimentos e habilidades adquiridas compensam o trabalho duro. Essa matéria foi responsável por uma mudança, tanto na minha visão como na minha postura como Engenheiro de Software.
+
+Como integrante da equipe, me sinto grato pela oportunidade do trabalho em equipe, e o desenvolvimento nessa habilidade. Tudo isso me mostrou que o trabalho em equipe é uma forma tremendamente magnífica para o aprendizado. No mais, me considero um integrante proativo no projeto, mas confesso que tive alguns momentos de distração, que custaram mais trabalho depois.
+
+Portanto, a matéria têm sido muito gratificante, pois é nítido que todo o trabalho duro realizado no semestre foi sendo projetado em novas e essenciais habilidades, pensamentos e conhecimentos como um aluno de Engenharia de Sofware
+
+
+
 ### Nilvan
 
 
@@ -105,7 +116,6 @@ E apesar de todas essas dificuldade fiquei contente com o resultado na disciplin
 
 
 
-### Antonio
 
 
 
