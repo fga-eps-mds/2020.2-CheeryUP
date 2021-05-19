@@ -8,12 +8,15 @@
 | 13/05/2021 | 0.2 | Adição do Topico metodologias e Processo e Referencias utilizadas | Davi Matheus |
 | 14/05/2021 | 0.3 | Adição do Escopo | Davi Matheus |
 | 15/05/2021 | 0.5 | Adição das tecnologias e do topico da Release 1 | Davi Matheus | 
+| 16/05/2021 | 0.6 | Adição dos sentimentos antonio | Antonio Neto | 
+| 17/05/2021 | 0.7 | Adição dos sentimentos: Abraao | Abraao | 
+| 17/05/2021 | 0.8 | Adição dos sentimentos: Lucas | Lucas | 
+| 18/05/2021 | 0.9 | Adição dos sentimentos: Natanel | Natanel | 
+
 # Introdução
 
 O documento tem como objetivo relatar as experiências vivências no projeto, sendo assim, um  documento é uma reflexão do time, realizada na fase de finalização do projeto, em que levantaremos tópicos que englobam acontecimentos que tiveram grandes impactos ao decorrer do projeto, para  assim, concretizar as lições aprendida.
  # Escopo do projeto
-
-Nosso projeto, primeiramente foi algo proposto e feito pela professora, 
 
 A plataforma web Cheery Up, desenvolvida para psicólogos e profissionais da saúde psicológica, será um prontuário de monitoramento da saúde mental da uma comunidade. Nessa plataforma, o psicólogo se cadastra e tem acesso à ferrramentas que irão facilitar o monitoramento da saúde mental de cada paciente que desejar cadastrar, além do usufruto de Dashboards para a observação geral da comunindade. Também há o business inteligence a partir dos dados inseridos pelos psicológos. 
 
@@ -65,7 +68,6 @@ Docker é um software contêiner que fornece uma camada de abstração e automa�
 Já o docker-compose funciona como um orquestrador de contêiners Docker.
 
 Não tendo o grupo de EPS para nos ajudar com o a configuração do Docker no começo foi meio complicado mexer e programar direitinho o ambiente, porém com os treinamenrto oferecido e com algumas horas aprendemos muito e conseguimos configurara-lo paraa nosso projeto.
-# Arquitetura
 # Entrega da R1
 
 A preparação da Release 1 foi muito tranquila para o nosso grupo, em que os documentos e artefatos foram feitos com qualidade e revisados com cuidado uma sprint antes da apresentação, porém a gravação do video foi algo meio caótico, em que alguns integrantes do grupo tiveram que comprar outro microfone porque o deles estava estragado, outro estava tendo problema com a internet, em meio dessas dificuldades conseguimos gravar o video e entregar faltando 10 minutos. 
@@ -83,6 +85,16 @@ Assim, alguns erros e pontos que precisam ser aprimorados expostos no feedback:
 
 # Sentimentos da Equipe
 
+
+### Abraao 
+
+No inicio da disciplina eu e o grupo estávamos meio perdidos em relação ao que tinha que ser feito,já que nenhum de nós não tínhamos experiencia em projetos mais profissionais e muito menos sobre as tecnologias que iriamos ultilizar em nosso projeto , porém, apesar de tudo isso
+na release 1 tivemos um excelente trabalho em equipe o que nos ajudou muito na organização do projeto e também a entender melhor as metodologias de desenvolvimento de software mais adequadas para o nosso projeto.
+
+Mas a partir da release 2 tanto eu como o Davi perdemos muito contato com a galera do frontend
+que acabou deixando agente bastante preocupado em relação a conclusão do projeto. Acho que uma questão muito interessante do projeto foi manter um contato constante com o nosso cliente para saber o que deveria ser feito e realizar essa comunicação foi um tanto confusa já que não sabemos nada sobre psicologia e os psicólogos que tivemos contato não sabiam muito sobre como falar no que eles estavam pensando tanto que uma delas disse que agente tava lá tentando fazer mais com que agente entendesse o que o outro dizia do que realmente fazer e implementar o projeto. Mas no final das contas agente conseguiu entender o que se passava na mente de cada um.
+
+E apesar de todas essas dificuldade fiquei contente com o resultado na disciplina e hoje com tantas ferramentas e tecnologias estudadas, metodologias usadas, trabalho em grupo e com uma comunicação direta com um possível cliente, entendo sua importância em um curso como esse.
 ### Nilvan
 
 
@@ -90,7 +102,7 @@ Assim, alguns erros e pontos que precisam ser aprimorados expostos no feedback:
 ### Davi
 
 
-### Abraao
+
 
 
 ### Antonio
