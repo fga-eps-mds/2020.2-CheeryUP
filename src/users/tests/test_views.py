@@ -277,7 +277,7 @@ class PsicologoModelViewSetTestCase(APITestCase):
         self.test_create_psicologo()
 
         data = {
-             "nome": "Marcela", 
+             "name": "Marcela", 
         }
 
         response = self.client.patch(
