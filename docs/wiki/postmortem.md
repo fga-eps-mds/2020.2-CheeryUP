@@ -137,6 +137,12 @@ Em suma, aprendi muito mais do que eu esperava com essa matéria. Desde a relaç
 
 ### Arthur
 
+Antes de iniciar o semestre, já tinha conhecimento do tempo e atenção que seriam grandemente demandados pela disciplina. Contudo, dividi-la com outras 7 foi, sem dúvidas, um desafio à parte.
+Apesar da dificuldade de adaptação com toda a metodologia, encarei este desafio com muita satisfação, sabendo da importância de MDS no que diz respeito à uma imersão mais profunda nas demandas a serem correspondidas no mercado de trabalho.
+
+Apesar de já ter conhecimento de algumas linguagens de programação, meu conhecimento parecia muito aquém do esperado para uma boa contribuição e desenvolvimento do projeto. Sabendo disso, não medi esforços para tentar evoluir e cumprir com o que me era designado, ainda que lentamente. Para que isto se efetuasse, a comunicação, compreensão e colaboração dos meus companheiros constituíram fatores determinantes. 
+
+Findo a disciplina com um sentimento de dever cumprido que vai muito além da simples realização do projeto proposto. Na realidade, a importância da comunicação e trabalho em equipe aliadas ao esforço contínuo para nossa evolução como futuros engenheiros de software constituíram os pontos centrais de nossa caminhada até o etágio atual. Apesar de, claramente, nos encontrarmos em níveis de prepraração distintos, temos todos a característica comum de saírmos bem mais capacitados do que entramos.
 
 # Conclusão
 
