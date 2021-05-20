@@ -56,7 +56,7 @@
 ## Release 2
  >[Slides](https://www.canva.com/design/DAEe4sMKB-g/3b3rJbIIAFG-_QeSFW_4Dg/view?utm_content=DAEe4sMKB-g&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
 
-> [Video](https://www.youtube.com/watch?v=sbuFW0D_nLc)
+> [Video](https://www.youtube.com/watch?v=pSQB8eEPJGM)
 <br>
 
 ## Tecnologias
