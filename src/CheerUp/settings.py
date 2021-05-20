@@ -175,7 +175,7 @@ STATIC_URL = '/static/'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://cheeryup-react.herokuapp.com",
+    "https://cheeryup-frontend.herokuapp.com",
     "http://localhost:3000"
 ]
 
