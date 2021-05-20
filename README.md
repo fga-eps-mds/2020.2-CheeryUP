@@ -53,6 +53,12 @@
 > [Video](https://www.youtube.com/watch?v=-i132rXQbEE)
 <br>
 
+## Release 2
+ >[Slides](https://www.canva.com/design/DAEe4sMKB-g/3b3rJbIIAFG-_QeSFW_4Dg/view?utm_content=DAEe4sMKB-g&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+
+> [Video](https://www.youtube.com/watch?v=sbuFW0D_nLc)
+<br>
+
 ## Tecnologias
 <a href="https://habrastorage.org/webt/zt/rm/bk/ztrmbknpfaz9ybmoy3j12x5tlcw.gif"><img src="https://habrastorage.org/webt/zt/rm/bk/ztrmbknpfaz9ybmoy3j12x5tlcw.gif" width=15% height=20%></a>
 <a href="https://ibb.co/sQLLDgH"><img src="https://i.ibb.co/tcyyNHX/3112.png" width=15% height= 10% alt="3112" border="0"></a>
