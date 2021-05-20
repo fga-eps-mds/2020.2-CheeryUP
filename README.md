@@ -59,6 +59,10 @@
 > [Video](https://www.youtube.com/watch?v=pSQB8eEPJGM)
 <br>
 
+>[React Psicologa](https://www.youtube.com/watch?v=XCNxhW2fn4k)
+
+>[Experiencias com o Cliente](https://drive.google.com/drive/u/0/folders/195V0138bHyXzHfL6_1UvNU5966Rn3QXk)
+
 ## Tecnologias
 <a href="https://habrastorage.org/webt/zt/rm/bk/ztrmbknpfaz9ybmoy3j12x5tlcw.gif"><img src="https://habrastorage.org/webt/zt/rm/bk/ztrmbknpfaz9ybmoy3j12x5tlcw.gif" width=15% height=20%></a>
 <a href="https://ibb.co/sQLLDgH"><img src="https://i.ibb.co/tcyyNHX/3112.png" width=15% height= 10% alt="3112" border="0"></a>
