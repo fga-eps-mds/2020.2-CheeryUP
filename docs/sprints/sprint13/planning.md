@@ -61,9 +61,12 @@
 |[#164](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/164) |  Melhorar Visual geral das paginas|[antoniotoineto](https://github.com/antoniotoineto), [fernandes-natanael](https://github.com/fernandes-natanael) & [Abraao1231](https://github.com/Abraao1231))| 5 |
 |[#165](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/165) | Melhorar a qualidade do código front-end|[DaviMatheus](https://github.com/DaviMatheus)| 8 |
 |[#166](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/166) |  Atualizar Roadmaps  | [DaviMatheus](https://github.com/DaviMatheus)| 5 |
+|[#175](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/175) | Termino do Postmortem   | Todos os instegrantes | 5 |
+|[#176](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/176) | Elaboração da Apresentação para a Release 2  | Todos os instegrantes | 5 |
+|[#177](https://github.com/fga-eps-mds/2020.2-CheeryUP/issues/177) | Atualização Final do Repositório | Todos os instegrantes | 6 |
 
 ***Pontuação:***
-* 112 pontos planejados.
+* 128 pontos planejados.
 
 ## 4 - Time-Box
 |ID | Descrição | Responsável| Prazo de entrega |
