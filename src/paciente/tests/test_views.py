@@ -1,8 +1,10 @@
+from http import client
 from rest_framework.test import APITestCase
 from django.urls import reverse
 from rest_framework.test import APIRequestFactory
 from paciente.models import Paciente
 from users.models import Psicologo
+from django.contrib.auth.models import User
 
 class PacienteModelViewSetTestCase(APITestCase):
 
@@ -372,3 +374,8 @@ class PacienteModelViewSetTestCase(APITestCase):
             format='json',
             **self.credentials,
         )
+
+
+
+
+        
