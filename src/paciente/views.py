@@ -61,10 +61,18 @@ def getGender(request, user__username):
 
 
 def getPacienteGraphEvolution(request, user__username, cpf):
+   
     psicologo = Psicologo.objects.get(user__username=user__username)
-    paciente = Paciente.objects.get(psicologo=psicologo, cpf=cpf)
+    try:
+        paciente = Paciente.objects.get(psicologo=psicologo, cpf=cpf)
+    except:
+        return JsonResponse({"error": "paciente não cadastrado"},json_dumps_params={'ensure_ascii': False}, safe=False) 
     consultas = list(Consulta.objects.filter(paciente=paciente))
-    soma = 0
-    # for consulta in consultas:
-        # soma += sum(consulta)
-    return JsonResponse({'consultas':0}, status=200)        
+    data = []
+    for consulta in consultas:
+        serializer = ConsultaSerializer(consulta).data
+        especialAttributes = (serializer["humor"]+serializer["estabilidadeDeEmoções"])*3
+        del serializer["id"], serializer["data"], serializer["produtividade"], serializer["humor"], serializer["estabilidadeDeEmoções"]
+        soma = especialAttributes + sum(serializer.values())
+        data.append(soma)        
+    return JsonResponse({'consultas':data},json_dumps_params={'ensure_ascii': False}, status=200)        
